@@ -8,6 +8,9 @@
   "popupSubtitle": { "message": "Prevents accidental sends" },
   "funRowTitle": { "message": "Fun reactions" },
   "funRowDesc": { "message": "Show a short comment after each send" },
+  "commentLangLabel": { "message": "Comment language" },
+  "commentLangDesc": { "message": "Lets you test comments without changing your browser's language" },
+  "commentLangAuto": { "message": "Auto (match browser)" },
   "hintUnlock": { "message": "Unlock: click the 🔒 icon / Ctrl+Shift+U" },
   "hintCancel": { "message": "Cancel: Esc key" },
   "hintPin": { "message": "💡 Pin this extension to your toolbar for one-click access" }

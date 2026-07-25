@@ -4,7 +4,7 @@
 
 # Send Guard
 
-![version](https://img.shields.io/badge/version-0.6.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-0.7.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 English | [日本語](./README.md)
 

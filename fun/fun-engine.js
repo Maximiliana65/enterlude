@@ -7,29 +7,35 @@ window.SendGuard = window.SendGuard || {};
 
 window.SendGuard.funEngine = {
   showRandomComment() {
-    const list = this._pickCommentsList();
-    if (list.length === 0) return;
+    // 設定画面で言語が手動指定されていれば、それを優先する
+    window.SendGuard.settingsStore.get(['commentLang'], (settings) => {
+      const list = this._pickCommentsList(settings.commentLang);
+      if (list.length === 0) return;
 
-    // season が指定されているコメントは、その期間の外では候補から完全に除外する
-    const available = list.filter((item) => this._isInSeason(item));
-    if (available.length === 0) return;
+      // season が指定されているコメントは、その期間の外では候補から完全に除外する
+      const available = list.filter((item) => this._isInSeason(item));
+      if (available.length === 0) return;
 
-    // rare なコメントほど出現率を下げるための重み付け抽選
-    const pool = [];
-    available.forEach((item) => {
-      const weight = item.rare ? 1 : 6;
-      for (let i = 0; i < weight; i++) pool.push(item);
+      // rare なコメントほど出現率を下げるための重み付け抽選
+      const pool = [];
+      available.forEach((item) => {
+        const weight = item.rare ? 1 : 6;
+        for (let i = 0; i < weight; i++) pool.push(item);
+      });
+
+      const picked = pool[Math.floor(Math.random() * pool.length)];
+      this._showToast(picked);
     });
-
-    const picked = pool[Math.floor(Math.random() * pool.length)];
-    this._showToast(picked);
   },
 
-  // ブラウザの表示言語に応じて、日本語版/英語版/韓国語版のどれを使うか選ぶ。
-  // 該当する言語が無い場合は日本語→英語の順にフォールバックする。
-  _pickCommentsList() {
+  // 設定で言語が指定されていればそれを使い、"auto"(または未指定)ならブラウザの
+  // 表示言語から自動判定する。該当する言語が無い場合は英語→日本語の順にフォールバックする。
+  _pickCommentsList(overrideLang) {
     const sets = window.SendGuardComments || {};
-    const lang = (window.SendGuard.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja').toLowerCase();
+    let lang = overrideLang;
+    if (!lang || lang === 'auto') {
+      lang = (window.SendGuard.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja').toLowerCase();
+    }
     let preferred;
     if (lang.startsWith('ja')) preferred = sets.ja;
     else if (lang.startsWith('ko')) preferred = sets.ko;

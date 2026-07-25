@@ -7,12 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const funToggle = document.getElementById('funToggle');
+  const commentLangSelect = document.getElementById('commentLangSelect');
 
-  chrome.storage.sync.get({ funEnabled: false }, (result) => {
+  chrome.storage.sync.get({ funEnabled: false, commentLang: 'auto' }, (result) => {
     funToggle.checked = result.funEnabled;
+    commentLangSelect.value = result.commentLang;
   });
 
   funToggle.addEventListener('change', () => {
     chrome.storage.sync.set({ funEnabled: funToggle.checked });
+  });
+
+  commentLangSelect.addEventListener('change', () => {
+    chrome.storage.sync.set({ commentLang: commentLangSelect.value });
   });
 });

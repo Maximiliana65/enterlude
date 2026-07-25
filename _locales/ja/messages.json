@@ -8,6 +8,9 @@
   "popupSubtitle": { "message": "うっかり送信を防ぐための拡張機能" },
   "funRowTitle": { "message": "お楽しみ機能" },
   "funRowDesc": { "message": "送信後に一言コメントを表示します" },
+  "commentLangLabel": { "message": "コメントの言語" },
+  "commentLangDesc": { "message": "動作確認用に、ブラウザの言語と関係なく切り替えられます" },
+  "commentLangAuto": { "message": "自動（ブラウザに合わせる）" },
   "hintUnlock": { "message": "ロック解除: 🔒アイコンをクリック / Ctrl+Shift+U" },
   "hintCancel": { "message": "キャンセル: Escキー" },
   "hintPin": { "message": "💡 ツールバーにピン留めすると、次からワンクリックで開けます" }

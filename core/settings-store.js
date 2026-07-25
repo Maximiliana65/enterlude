@@ -7,7 +7,8 @@
 window.SendGuard = window.SendGuard || {};
 
 const SG_DEFAULT_SETTINGS = {
-  funEnabled: false
+  funEnabled: false,
+  commentLang: 'auto'
 };
 
 window.SendGuard.settingsStore = {
