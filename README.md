@@ -4,9 +4,9 @@
 
 # Send Guard（送信ロック）
 
-![version](https://img.shields.io/badge/version-0.7.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-0.8.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
-**日本語** | [English](./README.en.md)
+**日本語** | [English](./README.en.md) | [한국어](./README.ko.md)
 
 AIチャット(Claude / ChatGPT / Gemini)で、うっかりEnterキーや送信・再試行ボタンを
 押してしまい、書きかけのメッセージを送ってしまう事故を防ぐためのChrome/Edge拡張機能です。
@@ -54,10 +54,10 @@ core/       … 送信ロックの共通ロジック（サイトに依存しな�
             … *-page-guard.js は、サイト本体と同じ実行空間(MAIN world)で
               動く専用ガード(ChatGPT・Geminiのみ。詳細はDEVLOG参照)
 adapters/   … サイトごとの「入力欄・送信ボタンの場所」の定義
-fun/        … お楽しみ機能（一言コメントなど。comments.ja.js / comments.en.jsを
-              ブラウザの表示言語に応じて自動的に切り替え）
+fun/        … お楽しみ機能（一言コメントなど。comments.ja.js / comments.en.js / comments.ko.jsを
+              ブラウザの表示言語に応じて自動的に切り替え。設定画面から手動指定も可能）
 popup/      … 拡張機能アイコンから開く設定画面
-_locales/   … 多言語対応のための表示文言（現在: 日本語・英語）
+_locales/   … 多言語対応のための表示文言（現在: 日本語・英語・韓国語）
 icons/      … 拡張機能アイコン（ツールバー表示用。視認性重視のシンプルな鍵デザイン）
 docs/       … 設計資料・スクリーンショット・ブランド用ロゴなど
 ```

@@ -4,9 +4,9 @@
 
 # Send Guard
 
-![version](https://img.shields.io/badge/version-0.7.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-0.8.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
-English | [日本語](./README.md)
+English | [日本語](./README.md) | [한국어](./README.ko.md)
 
 A Chrome/Edge extension that prevents accidental sends in AI chats (Claude / ChatGPT / Gemini) — no more half-written messages sent by a stray Enter key or misclick.
 
@@ -52,10 +52,11 @@ core/       … shared lock logic, independent of any specific site
             … *-page-guard.js files run in the page's own MAIN world
               (ChatGPT and Gemini only — see DEVLOG for why)
 adapters/   … per-site definitions of "where's the input box / send button"
-fun/        … the optional fun-comment feature (comments.ja.js / comments.en.js
-              are picked automatically based on the browser's UI language)
+fun/        … the optional fun-comment feature (comments.ja.js / comments.en.js /
+              comments.ko.js, picked automatically based on the browser's UI language,
+              or overridden manually from the settings screen)
 popup/      … the settings screen opened from the toolbar icon
-_locales/   … UI strings for i18n (currently Japanese and English)
+_locales/   … UI strings for i18n (currently Japanese, English, and Korean)
 icons/      … toolbar icon (a simple lock, chosen for legibility at small sizes)
 docs/       … design notes, screenshots, brand assets
 ```
