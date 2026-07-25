@@ -497,6 +497,35 @@ Claudeとこのプロジェクトを作っていく過程のメモです。
 
 ---
 
+## 2026-07-22　"Extension context invalidated" エラーへの対応(v0.6.1)
+
+### 報告内容
+- Claude.aiの開きっぱなしタブで `Uncaught Error: Extension context invalidated.` が発生
+  (`core/content-main.js`の`chrome.i18n.getMessage`呼び出しで発生)
+
+### 原因
+- 拡張機能を`chrome://extensions`で再読み込みすると、その時点で既に開いていたタブの
+  コンテンツスクリプトは「古いつながり」のまま取り残される
+- その状態で`chrome.*`のAPIを呼ぶとこのエラーが発生する。開発中に何度も拡張機能を
+  再読み込みしてきたため、開きっぱなしだったタブで起きたと考えられる
+- 実際に公開後も、将来のアップデート配信時に同じことがユーザー環境で起こり得るため、
+  対応する価値があると判断
+
+### 対応
+- `core/dom-utils.js`に`safeCall(fn, fallback)`を追加し、`chrome.i18n`・`chrome.storage`の
+  呼び出しをtry/catchで安全化。エラー時は既定値に静かにフォールバックするように変更
+  (`core/content-main.js`, `core/settings-store.js`, `fun/fun-engine.js`)
+- MAIN worldで動く`chatgpt-page-guard.js`・`gemini-page-guard.js`は元々`chrome.*`APIを
+  使用していないため、この問題の影響を受けないことを確認
+- ロック中のEnter遮断など、送信ロックの安全性そのものはこの問題の影響を受けないことを確認
+  (影響が出るのはバッジ表示・お楽しみ機能などの付随機能のみ)
+- 根本的な解消(コンテキストの再接続)にはタブの再読み込みが必要なため、その旨をユーザーに案内
+
+### 次回への申し送り
+- 特になし。Chrome Web Storeの審査結果待ち
+
+---
+
 ## 2026-07-19　Geminiの「やり直す」ボタンをロック対象へ追加（v0.4.1）
 
 - ロック中でもGeminiの「やり直す」ボタンが実行されることを確認

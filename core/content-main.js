@@ -31,7 +31,7 @@
   let labelEl = null;
 
   function msg(key) {
-    return chrome.i18n.getMessage(key) || key;
+    return SG.domUtils.safeCall(() => chrome.i18n.getMessage(key), '') || key;
   }
 
   function createBadge() {

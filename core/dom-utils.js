@@ -13,5 +13,21 @@ window.SendGuard.domUtils = {
   matchesAny(el, selectors) {
     if (!el || !el.closest) return false;
     return !!el.closest(selectors.join(','));
+  },
+
+  /**
+   * chrome.*のAPI呼び出しを安全に行うヘルパー。
+   * 拡張機能が更新・再読み込みされた後、開きっぱなしだったタブでは
+   * "Extension context invalidated" というエラーが起きることがある。
+   * (タブを再読み込みすれば直るが、それまでの間エラーで壊れて見えないようにする)
+   * @param {() => any} fn
+   * @param {any} fallback fn()が失敗した時に返す値
+   */
+  safeCall(fn, fallback) {
+    try {
+      return fn();
+    } catch (e) {
+      return fallback;
+    }
   }
 };

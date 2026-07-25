@@ -17,13 +17,23 @@ window.SendGuard.settingsStore = {
    * @param {(values: object) => void} callback
    */
   get(keys, callback) {
-    chrome.storage.sync.get(SG_DEFAULT_SETTINGS, (result) => {
+    try {
+      chrome.storage.sync.get(SG_DEFAULT_SETTINGS, (result) => {
+        const picked = {};
+        keys.forEach((key) => {
+          picked[key] = (result || {})[key];
+        });
+        callback(picked);
+      });
+    } catch (e) {
+      // 拡張機能のコンテキストが無効化されている場合(タブの再読み込みが必要な状態)は、
+      // エラーで処理全体を止めず、既定値で応答する
       const picked = {};
       keys.forEach((key) => {
-        picked[key] = result[key];
+        picked[key] = SG_DEFAULT_SETTINGS[key];
       });
       callback(picked);
-    });
+    }
   },
 
   /**
@@ -32,8 +42,12 @@ window.SendGuard.settingsStore = {
    * @param {() => void} [callback]
    */
   set(values, callback) {
-    chrome.storage.sync.set(values, () => {
+    try {
+      chrome.storage.sync.set(values, () => {
+        if (callback) callback();
+      });
+    } catch (e) {
       if (callback) callback();
-    });
+    }
   }
 };

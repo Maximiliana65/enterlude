@@ -29,7 +29,7 @@ window.SendGuard.funEngine = {
   // 該当する言語が無い場合は日本語→英語の順にフォールバックする。
   _pickCommentsList() {
     const sets = window.SendGuardComments || {};
-    const lang = (chrome.i18n.getUILanguage() || 'ja').toLowerCase();
+    const lang = (window.SendGuard.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja').toLowerCase();
     let preferred;
     if (lang.startsWith('ja')) preferred = sets.ja;
     else if (lang.startsWith('ko')) preferred = sets.ko;
