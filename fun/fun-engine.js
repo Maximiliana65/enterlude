@@ -25,13 +25,16 @@ window.SendGuard.funEngine = {
     this._showToast(picked);
   },
 
-  // ブラウザの表示言語(日本語かどうか)に応じて、日本語版/英語版のどちらの
-  // コメント一覧を使うか選ぶ。どちらか片方しか無い場合はそちらを使う。
+  // ブラウザの表示言語に応じて、日本語版/英語版/韓国語版のどれを使うか選ぶ。
+  // 該当する言語が無い場合は日本語→英語の順にフォールバックする。
   _pickCommentsList() {
     const sets = window.SendGuardComments || {};
     const lang = (chrome.i18n.getUILanguage() || 'ja').toLowerCase();
-    const preferred = lang.startsWith('ja') ? sets.ja : sets.en;
-    return preferred || sets.ja || sets.en || [];
+    let preferred;
+    if (lang.startsWith('ja')) preferred = sets.ja;
+    else if (lang.startsWith('ko')) preferred = sets.ko;
+    else preferred = sets.en;
+    return preferred || sets.ja || sets.en || sets.ko || [];
   },
 
   // 今日の日付が、コメントの season(期間指定)に当てはまるか判定する

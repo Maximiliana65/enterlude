@@ -4,7 +4,7 @@
 
 # Send Guard（送信ロック）
 
-![version](https://img.shields.io/badge/version-0.5.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-0.6.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 **日本語** | [English](./README.en.md)
 
