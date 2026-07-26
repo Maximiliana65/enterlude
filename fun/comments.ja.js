@@ -4,9 +4,9 @@
 // fun/comments.en.js、または元のコメント欄の説明を参照してください。
 // 表示する言語は fun/fun-engine.js が自動で切り替えます。
 
-window.SendGuardComments = window.SendGuardComments || {};
+window.EnterludeComments = window.EnterludeComments || {};
 
-window.SendGuardComments.ja = [
+window.EnterludeComments.ja = [
 
   // ===== 通常 =====
   { text: "どや!", emoji: "🐧" },

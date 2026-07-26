@@ -14,16 +14,16 @@
 //   - 解除中は何もせずイベントをそのまま通し、直後に自動で再ロックする
 
 (function () {
-  const SG = window.SendGuard;
+  const SG = window.Enterlude;
   const lockGuard = SG.lockGuard;
   const adapter = SG.adapter;
   const usesMainWorldGuard = adapter.usesMainWorldGuard === true;
-  const MAIN_WORLD_STATE_ATTRIBUTE = 'data-send-guard-unlocked';
+  const MAIN_WORLD_STATE_ATTRIBUTE = 'data-enterlude-unlocked';
 
   // CSS側(core/lock-ui.css)でサイトごとに見た目を微調整できるよう、
   // <html>要素に識別名を持たせておく(例: 画面が狭い時のバッジ位置の調整)
   if (adapter.siteId) {
-    document.documentElement.setAttribute('data-send-guard-site', adapter.siteId);
+    document.documentElement.setAttribute('data-enterlude-site', adapter.siteId);
   }
 
   let badgeEl = null;
@@ -117,8 +117,8 @@
   // CustomEvent の detail は world 間で扱いにくいため、状態は document 属性で共有する。
   if (usesMainWorldGuard) {
     syncMainWorldState(lockGuard.isUnlocked());
-    window.addEventListener('send-guard:state', applyMainWorldState);
-    window.addEventListener('send-guard:sent', () => {
+    window.addEventListener('enterlude:state', applyMainWorldState);
+    window.addEventListener('enterlude:sent', () => {
       applyMainWorldState();
       maybeShowFunComment();
     });

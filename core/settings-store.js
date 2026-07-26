@@ -4,14 +4,14 @@
 // こうしておくと、将来「設定項目を増やす」「保存先を変える」といった変更が
 // このファイルだけで完結する。
 
-window.SendGuard = window.SendGuard || {};
+window.Enterlude = window.Enterlude || {};
 
 const SG_DEFAULT_SETTINGS = {
   funEnabled: false,
   commentLang: 'auto'
 };
 
-window.SendGuard.settingsStore = {
+window.Enterlude.settingsStore = {
   /**
    * 設定値を取得する
    * @param {string[]} keys 取得したい設定のキー一覧

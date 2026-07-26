@@ -9,9 +9,9 @@
 // 文化的な違いを踏まえて、日本語版の直訳ではなく韓国語らしい表現に調整されています
 // (そのため、日本語版・英語版と1対1では対応していません)。
 
-window.SendGuardComments = window.SendGuardComments || {};
+window.EnterludeComments = window.EnterludeComments || {};
 
-window.SendGuardComments.ko = [
+window.EnterludeComments.ko = [
   // ===== 일반 =====
   { text: "나이스!", emoji: "🐧" },
   { text: "가자!", emoji: "🐋" },

@@ -5,10 +5,10 @@
 // Geminiの入力欄はリッチテキスト系のcontenteditableで実装されていることが多いため、
 // data-placeholder付きのcontenteditableも候補に含めています。
 
-window.SendGuard = window.SendGuard || {};
+window.Enterlude = window.Enterlude || {};
 
 (function () {
-  const { matchesAny } = window.SendGuard.domUtils;
+  const { matchesAny } = window.Enterlude.domUtils;
 
   const COMPOSER_SELECTORS = [
     'div[contenteditable="true"]',
@@ -35,7 +35,7 @@ window.SendGuard = window.SendGuard || {};
     'button[title*="やり直" i]'
   ];
 
-  window.SendGuard.adapter = {
+  window.Enterlude.adapter = {
     // CSS側でサイトごとに見た目を微調整するための識別名(core/lock-ui.css参照)
     siteId: 'gemini',
     // Geminiは入力欄を動的に作り直すため、送信判定をMAIN worldの専用ガードで行う。

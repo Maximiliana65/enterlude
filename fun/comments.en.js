@@ -9,9 +9,9 @@
 // Which language is shown is decided automatically by fun/fun-engine.js
 // based on the browser's UI language.
 
-window.SendGuardComments = window.SendGuardComments || {};
+window.EnterludeComments = window.EnterludeComments || {};
 
-window.SendGuardComments.en = [
+window.EnterludeComments.en = [
   // ===== Common =====
   { text: "Nailed it!", emoji: "🐧" },
   { text: "Boom!", emoji: "🐋" },

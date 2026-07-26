@@ -8,9 +8,9 @@
 //  - unlockOnce() で解除しても、1回消費されると自動でロックに戻る
 //  - 状態が変わるたびに、登録されたリスナーに通知する(UI更新のため)
 
-window.SendGuard = window.SendGuard || {};
+window.Enterlude = window.Enterlude || {};
 
-window.SendGuard.lockGuard = (() => {
+window.Enterlude.lockGuard = (() => {
   let unlocked = false;
   const listeners = [];
 

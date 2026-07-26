@@ -5,10 +5,10 @@
 (function () {
   'use strict';
 
-  if (window.__sendGuardChatGPTPageGuardInstalled) return;
-  window.__sendGuardChatGPTPageGuardInstalled = true;
+  if (window.__enterludeChatGPTPageGuardInstalled) return;
+  window.__enterludeChatGPTPageGuardInstalled = true;
 
-  const STATE_ATTRIBUTE = 'data-send-guard-unlocked';
+  const STATE_ATTRIBUTE = 'data-enterlude-unlocked';
   const COMPOSER_SELECTOR = '#prompt-textarea[contenteditable="true"], #prompt-textarea';
   const SEND_SELECTOR = [
     'button[data-testid="send-button"]',
@@ -31,7 +31,7 @@
 
   function relock() {
     document.documentElement.removeAttribute(STATE_ATTRIBUTE);
-    publish('send-guard:state');
+    publish('enterlude:state');
   }
 
   function elementFromEvent(event) {
@@ -83,7 +83,7 @@
       document.documentElement.setAttribute(STATE_ATTRIBUTE, 'true');
       event.preventDefault();
       event.stopImmediatePropagation();
-      publish('send-guard:state');
+      publish('enterlude:state');
       return;
     }
 
@@ -98,7 +98,7 @@
 
     if (isUnlocked()) {
       relock();
-      publish('send-guard:sent');
+      publish('enterlude:sent');
       return;
     }
 
@@ -112,7 +112,7 @@
 
     if (isUnlocked()) {
       relock();
-      publish('send-guard:sent');
+      publish('enterlude:sent');
       return;
     }
 

@@ -5,10 +5,10 @@
 // だけを判定する担当です。ロックの仕組み自体(core/)には一切手を入れません。
 // 画面デザインが変わって動かなくなった場合は、下のセレクタ配列だけを調整してください。
 
-window.SendGuard = window.SendGuard || {};
+window.Enterlude = window.Enterlude || {};
 
 (function () {
-  const { matchesAny } = window.SendGuard.domUtils;
+  const { matchesAny } = window.Enterlude.domUtils;
 
   const COMPOSER_SELECTORS = [
     'div[contenteditable="true"]',
@@ -29,7 +29,7 @@ window.SendGuard = window.SendGuard || {};
     'button[aria-label*="再生成" i]'
   ];
 
-  window.SendGuard.adapter = {
+  window.Enterlude.adapter = {
     // CSS側でサイトごとに見た目を微調整するための識別名(core/lock-ui.css参照)
     siteId: 'claude',
     isComposerElement(el) {

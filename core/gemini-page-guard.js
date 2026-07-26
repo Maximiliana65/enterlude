@@ -4,10 +4,10 @@
 (function () {
   'use strict';
 
-  if (window.__sendGuardGeminiPageGuardInstalled) return;
-  window.__sendGuardGeminiPageGuardInstalled = true;
+  if (window.__enterludeGeminiPageGuardInstalled) return;
+  window.__enterludeGeminiPageGuardInstalled = true;
 
-  const STATE_ATTRIBUTE = 'data-send-guard-unlocked';
+  const STATE_ATTRIBUTE = 'data-enterlude-unlocked';
   const COMPOSER_SELECTOR = 'rich-textarea .ql-editor[contenteditable="true"], rich-textarea [contenteditable="true"]';
   const SEND_SELECTOR = [
     'button[aria-label*="Send" i]',
@@ -36,8 +36,8 @@
 
   function relock(sent) {
     document.documentElement.removeAttribute(STATE_ATTRIBUTE);
-    publish('send-guard:state');
-    if (sent) publish('send-guard:sent');
+    publish('enterlude:state');
+    if (sent) publish('enterlude:sent');
   }
 
   function elementFromEvent(event) {
@@ -94,7 +94,7 @@
       document.documentElement.setAttribute(STATE_ATTRIBUTE, 'true');
       event.preventDefault();
       event.stopImmediatePropagation();
-      publish('send-guard:state');
+      publish('enterlude:state');
       return;
     }
 

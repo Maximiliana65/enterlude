@@ -5,10 +5,10 @@
 // 入力欄には id="prompt-textarea" の要素が使われることが多いですが、
 // 念のため一般的なcontenteditable/textareaの形も候補に含めています。
 
-window.SendGuard = window.SendGuard || {};
+window.Enterlude = window.Enterlude || {};
 
 (function () {
-  const { matchesAny } = window.SendGuard.domUtils;
+  const { matchesAny } = window.Enterlude.domUtils;
 
   const COMPOSER_SELECTORS = [
     '#prompt-textarea',
@@ -30,7 +30,7 @@ window.SendGuard = window.SendGuard || {};
     'button[aria-label*="再試行" i]'
   ];
 
-  window.SendGuard.adapter = {
+  window.Enterlude.adapter = {
     // CSS側でサイトごとに見た目を微調整するための識別名(core/lock-ui.css参照)
     siteId: 'chatgpt',
     // Enter は ChatGPT のページ本体と同じ実行コンテキストで先に止める。

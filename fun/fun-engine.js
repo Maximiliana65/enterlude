@@ -3,12 +3,12 @@
 // 表示する役割。「何を表示するか(comments.*.js)」と「どう表示するか(このファイル)」を
 // 分けているので、表示の演出だけ後から変えたい時もここだけ触ればいい。
 
-window.SendGuard = window.SendGuard || {};
+window.Enterlude = window.Enterlude || {};
 
-window.SendGuard.funEngine = {
+window.Enterlude.funEngine = {
   showRandomComment() {
     // 設定画面で言語が手動指定されていれば、それを優先する
-    window.SendGuard.settingsStore.get(['commentLang'], (settings) => {
+    window.Enterlude.settingsStore.get(['commentLang'], (settings) => {
       const list = this._pickCommentsList(settings.commentLang);
       if (list.length === 0) return;
 
@@ -31,10 +31,10 @@ window.SendGuard.funEngine = {
   // 設定で言語が指定されていればそれを使い、"auto"(または未指定)ならブラウザの
   // 表示言語から自動判定する。該当する言語が無い場合は英語→日本語の順にフォールバックする。
   _pickCommentsList(overrideLang) {
-    const sets = window.SendGuardComments || {};
+    const sets = window.EnterludeComments || {};
     let lang = overrideLang;
     if (!lang || lang === 'auto') {
-      lang = (window.SendGuard.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja').toLowerCase();
+      lang = (window.Enterlude.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja').toLowerCase();
     }
     let preferred;
     if (lang.startsWith('ja')) preferred = sets.ja;
