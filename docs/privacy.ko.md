@@ -1,6 +1,6 @@
 # Enterlude 개인정보처리방침
 
-최종 수정일: 2026년 7월 26일
+최종 수정일: 2026년 7월 27일
 
 [日本語](./privacy.md) | [English](./privacy.en.md) | 한국어
 
@@ -19,7 +19,11 @@ Enterlude는 개인정보를 수집·저장·전송하지 않습니다. 대화 �
 
 ## 작동 방식
 
-Enterlude는 지원되는 AI 채팅 서비스(Claude / ChatGPT / Gemini) 화면에서, 입력창·전송 버튼·재시도 버튼의 위치를 감지하기 위한 목적으로만 동작합니다. 이는 "실수로 전송되는 것을 방지"하는 본래 기능에 필요한 최소한의 범위이며, 대화 내용을 읽거나 기록하기 위한 목적이 아닙니다.
+Enterlude는 지원되는 AI 채팅 서비스(Claude / ChatGPT / Gemini) 화면에서 입력창·전송 버튼·재시도 버튼을 감지하여 오발송 방지 기능을 제공합니다. 대화 내용을 읽거나 기록하기 위한 목적이 아닙니다.
+
+## 권한에 대하여
+
+Enterlude는 지원되는 AI 채팅 페이지에서 오발송 방지 기능을 제공하는 데 필요한 범위 내에서만 작동합니다. 요청하는 권한은 설정 저장을 위한 `storage`와, 지원되는 3개 사이트로 한정된 열람 권한뿐입니다.
 
 ## 제3자 서비스
 
@@ -33,7 +37,7 @@ Enterlude는 무료입니다. 광고, 유료 기능, 구독은 없습니다.
 
 Enterlude는 오픈 소스입니다. 실제 동작 방식은 아래에서 모든 코드를 확인할 수 있습니다.
 
-https://github.com/Maximiliana65/enterlude
+[Enterlude GitHub Repository](https://github.com/Maximiliana65/enterlude)
 
 ## 정책 변경에 대하여
 
@@ -43,4 +47,4 @@ https://github.com/Maximiliana65/enterlude
 
 질문이나 궁금한 점이 있으시면 GitHub Issue로 연락해 주세요.
 
-https://github.com/Maximiliana65/enterlude/issues
+[GitHub Issues](https://github.com/Maximiliana65/enterlude/issues)

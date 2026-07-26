@@ -1,6 +1,6 @@
 # Enterlude Privacy Policy
 
-Last updated: July 26, 2026
+Last updated: July 27, 2026
 
 [日本語](./privacy.md) | English | [한국어](./privacy.ko.md)
 
@@ -19,7 +19,11 @@ These values stay on your own device and browser. They are never sent anywhere, 
 
 ## How It Works
 
-Enterlude runs on the pages of supported AI chat services (Claude / ChatGPT / Gemini) only to detect the location of the message input box, send button, and retry button. This is the minimum needed to provide its core feature — preventing accidental sends — and it is not used to read or record the content of your conversations.
+Enterlude detects the message input box, send button, and retry button on supported AI chat services (Claude / ChatGPT / Gemini) in order to provide its send-protection feature. It is not used to read or record the content of your conversations.
+
+## Permissions
+
+Enterlude only operates within the scope needed to provide its send-protection feature on supported AI chat pages. The permissions it requests are limited to `storage` (to save your settings) and browsing access to the three supported sites only.
 
 ## Third-Party Services
 
@@ -33,7 +37,7 @@ Enterlude is free. There are no ads, paid features, or subscriptions.
 
 Enterlude is open source. You can review exactly how it works here:
 
-https://github.com/Maximiliana65/enterlude
+[Enterlude GitHub Repository](https://github.com/Maximiliana65/enterlude)
 
 ## Changes to This Policy
 
@@ -43,4 +47,4 @@ If this privacy policy changes, this page will be updated to reflect it.
 
 If you have any questions, please open an issue on GitHub:
 
-https://github.com/Maximiliana65/enterlude/issues
+[GitHub Issues](https://github.com/Maximiliana65/enterlude/issues)
