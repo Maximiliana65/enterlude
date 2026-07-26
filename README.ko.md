@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="./docs/images/logo.png" alt="Send Guard logo" width="96" />
+  <img src="./docs/images/logo.png" alt="Enterlude logo" width="96" />
 </p>
 
-# Send Guard
+# Enterlude
 
-![version](https://img.shields.io/badge/version-0.8.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 한국어 | [日本語](./README.md) | [English](./README.en.md)
 

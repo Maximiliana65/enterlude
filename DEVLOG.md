@@ -572,3 +572,44 @@ Claudeとこのプロジェクトを作っていく過程のメモです。
 - 「SendGuard」(スペース無し表記)への名称統一案は、変更箇所が多いため、
   別途あらためて相談してから着手する方針
 - Chrome Web Storeの審査結果待ち
+
+---
+
+## 2026-07-25　「Enterlude」への改名(v1.0.0)
+
+### 経緯
+- 「SendGuard」(スペース無し統一)案について商標調査をしたところ、類似ジャンルで既存の名前が
+  複数見つかったため見送りに
+- 別スレッドのClaudeに新しい名前のアイデア出しを依頼し、「Enterlude」(Enter + interlude=幕間)を
+  採用。商標の重複がないことも確認済みとのこと
+  - 由来: 送信前に挟まる「小さな幕間」というニュアンス。機能の本質(送信前の"間")を表しつつ、
+    多言語で発音しやすく、ロゴ・アイコンにも展開しやすい語感
+- Chrome Web Storeの審査を一度取り下げ、新名称で再申請する方針
+- 変更範囲が広いため、まず変更対象の一覧化(manifest/_locales/README/ドキュメント/コード内識別子/
+  画像/GitHub関連)を行ってから、段階を分けて進めることにした
+- バージョンは、名称の正式なお披露目・韓国語対応も合わせた区切りとして`v1.0.0`にすることに決定
+
+### やったこと(第1段階: 作業環境内での変更)
+- コード内部の識別子を統一(ユーザーには見えない部分)
+  - `window.SendGuard` → `window.Enterlude`、`window.SendGuardComments` → `window.EnterludeComments`
+  - `data-send-guard-unlocked`/`-site` → `data-enterlude-unlocked`/`-site`
+    (content-main.js・chatgpt-page-guard.js・gemini-page-guard.jsの3ファイルをまたぐため、
+    一致していることを確認しながら慎重に置換)
+  - カスタムイベント名`send-guard:state`/`:sent` → `enterlude:state`/`:sent`
+  - ガードフラグ`__sendGuardChatGPTPageGuardInstalled`等も統一
+  - 置換後、構文チェックと名前空間の連携動作(lockGuard/settingsStore/adapter/funEngineの読み込み)をテストして確認
+- 表示名を更新
+  - `_locales`(ja/en/ko)の`appName`/`popupTitle`をEnterludeベースに変更
+  - `popup.html`の`<title>`タグを更新
+- README(3言語)・図解(SVG)のタイトル・ロゴのalt属性を更新
+- ストア掲載用プロモ画像(`store-promo-440x280.png`)を、画像内に焼き込まれていた文字も
+  含めて「Enterlude」名義で作り直し
+- ROADMAPの名称変更の項目を、決定事項として更新
+- GitHubのURLは今回あえて変更せず維持(リポジトリ名変更が済んでいないため、今変更すると
+  一時的にリンク切れになる。安全のため、リポジトリ名変更後に別コミットでまとめて更新する方針)
+- 過去のCHANGELOG/DEVLOGの記録は、ユーザーの意向で書き換えず、当時の名称のまま保持
+
+### 次回への申し送り
+- 第2段階: GitHubリポジトリ名を`send-guard`→`enterlude`に変更(ユーザー側の作業)
+- 第3段階: リポジトリ名変更後、README等のGitHub URLをまとめて更新する別コミットを作成
+- 第4段階: Chrome Web Storeの再申請、Xプロフィールの表示名変更(いずれもユーザー側の作業)

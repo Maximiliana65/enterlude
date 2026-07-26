@@ -1,5 +1,5 @@
 <svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
-<title>How Send Guard works</title>
+<title>How Enterlude works</title>
 <desc>Flow diagram showing that pressing Enter or Send while locked just adds a line break, while unlocking via the icon or shortcut allows exactly one send before it automatically re-locks.</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#73726c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>

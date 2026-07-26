@@ -1,5 +1,5 @@
 <svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
-<title>Send Guardの使い方の流れ</title>
+<title>Enterludeの使い方の流れ</title>
 <desc>Enterキーや送信ボタンを押した時、ロック中なら改行になり、解除中なら送信されて自動的に再ロックされる流れを示す図。アイコンクリックまたはショートカットで解除できる。</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#73726c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>

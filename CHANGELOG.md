@@ -9,6 +9,17 @@
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-07-25
+### 変更
+- プロジェクト名を「Send Guard」から**「Enterlude」**に改名（Enter + interlude=幕間、送信前の
+  「小さな間」を表す名前）。1.0.0を、正式名称でのリリースの区切りとする
+  - コード内部の識別子(`window.SendGuard` → `window.Enterlude`、DOM属性名・カスタムイベント名など)を統一
+  - `_locales`(ja/en/ko)の表示名・`popup.html`のタイトルを更新
+  - README(3言語)のタイトル・ロゴのalt属性・図解(SVG)のタイトルを更新
+  - ストア掲載用のプロモ画像を「Enterlude」名義で作り直し
+  - GitHubリポジトリ名・各種URLは、リポジトリ名変更後に別途更新予定
+- 過去のCHANGELOG/DEVLOGの記録は、当時の名称のまま履歴として保持
+
 ## [0.8.0] - 2026-07-22
 ### 追加
 - 韓国語のUI対応(`_locales/ko/messages.json`)を追加。ポップアップ・バッジの表示文言が
