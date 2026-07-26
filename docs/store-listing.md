@@ -37,7 +37,7 @@ Claude(claude.ai) / ChatGPT(chatgpt.com) / Gemini(gemini.google.com)
 
 ■ オープンソース
 ソースコードはGitHubで公開しています。
-https://github.com/Maximiliana65/send-guard
+https://github.com/Maximiliana65/enterlude
 ```
 
 ---

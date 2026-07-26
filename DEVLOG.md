@@ -613,3 +613,16 @@ Claudeとこのプロジェクトを作っていく過程のメモです。
 - 第2段階: GitHubリポジトリ名を`send-guard`→`enterlude`に変更(ユーザー側の作業)
 - 第3段階: リポジトリ名変更後、README等のGitHub URLをまとめて更新する別コミットを作成
 - 第4段階: Chrome Web Storeの再申請、Xプロフィールの表示名変更(いずれもユーザー側の作業)
+
+---
+
+## 2026-07-26　GitHubリポジトリ名変更を反映(第3段階)
+
+### やったこと
+- ユーザーがGitHub側でリポジトリ名を`send-guard`→`enterlude`に変更完了
+- README(3言語)・ROADMAP・docs/store-listing.md内のGitHub URLを、新しいリポジトリ名に一括更新
+  (CHANGELOG/DEVLOGにはURL記載が無いことを確認済みのため、対象外)
+- ROADMAP冒頭の「改名作業中」の表記を「改名完了」に更新
+
+### 次回への申し送り
+- 第4段階: Chrome Web Storeの新名称での再申請、Xプロフィールの表示名変更(いずれもユーザー側の作業)

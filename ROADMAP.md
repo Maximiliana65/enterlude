@@ -1,9 +1,8 @@
 # ROADMAP
 
-**現在地**: フェーズ1〜4すべて完了、[GitHubで公開中](https://github.com/Maximiliana65/send-guard)です。
-🚧 **「Enterlude」への改名作業を進行中**（v1.0.0での正式リリースを予定。GitHubリポジトリ名の
-変更後、リンク類も新URLに更新します）。
-残っているのは任意項目（Edgeアドオンストア登録）と、将来的な検討事項のみです。
+**現在地**: フェーズ1〜4すべて完了、[GitHubで公開中](https://github.com/Maximiliana65/enterlude)です。
+✅ **「Enterlude」への改名完了**（v1.0.0。GitHubリポジトリ名も`enterlude`に変更済み）。
+残っているのは、Chrome Web Storeの新名称での再申請と、任意項目（Edgeアドオンストア登録）です。
 
 ## フェーズ1: Claude.aiで動くコア機能
 - [x] 全体設計（コア / サイトアダプター / お楽しみプラグインの3層構造）

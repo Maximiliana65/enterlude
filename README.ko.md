@@ -18,7 +18,7 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 
 ## 현재 상태
 
-✅ 공개됨 — [GitHub에서 공개 중](https://github.com/Maximiliana65/send-guard) (Claude / ChatGPT / Gemini, Chrome·Edge의 일반/시크릿 모드에서 동작 확인 완료)
+✅ 공개됨 — [GitHub에서 공개 중](https://github.com/Maximiliana65/enterlude) (Claude / ChatGPT / Gemini, Chrome·Edge의 일반/시크릿 모드에서 동작 확인 완료)
 
 향후 계획은 [ROADMAP.md](./ROADMAP.md), 변경 이력은 [CHANGELOG.md](./CHANGELOG.md), 개발 과정은 [DEVLOG.md](./DEVLOG.md), 초기 설계 내용은 [docs/DESIGN.md](./docs/DESIGN.md)를 참고해 주세요.
 
