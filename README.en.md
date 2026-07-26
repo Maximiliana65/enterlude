@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.0.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 English | [日本語](./README.md) | [한국어](./README.ko.md)
 
@@ -20,7 +20,7 @@ A Chrome/Edge extension that prevents accidental sends in AI chats (Claude / Cha
 
 ✅ Published — [live on GitHub](https://github.com/Maximiliana65/enterlude) (verified on Claude / ChatGPT / Gemini, on Chrome and Edge, in both regular and private/incognito windows)
 
-See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md) for release history, [DEVLOG.md](./DEVLOG.md) for the development journal, and [docs/DESIGN.md](./docs/DESIGN.md) for the original design notes.
+See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md) for release history, [DEVLOG.md](./DEVLOG.md) for the development journal, [docs/DESIGN.md](./docs/DESIGN.md) for the original design notes, and [docs/privacy.en.md](./docs/privacy.en.md) for the privacy policy.
 
 ## What it does
 

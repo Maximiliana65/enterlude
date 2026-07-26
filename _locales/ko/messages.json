@@ -1,6 +1,6 @@
 {
-  "appName": { "message": "Enterlude - AI 오전송 방지" },
-  "appDescription": { "message": "실수로 Enter나 전송 버튼을 눌러 오전송하는 것을 방지하는 확장 프로그램" },
+  "appName": { "message": "Enterlude - AI 채팅 오발송 방지" },
+  "appDescription": { "message": "실수로 Enter나 전송 버튼을 눌러 오발송하는 것을 방지하는 확장 프로그램" },
   "badgeLocked": { "message": "잠금 중" },
   "badgeUnlocked": { "message": "전송 가능" },
   "badgeTooltip": { "message": "클릭하면 다음 1회만 전송할 수 있습니다 (Ctrl+Shift+U로도 해제 가능)" },

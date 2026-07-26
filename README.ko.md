@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.0.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 한국어 | [日本語](./README.md) | [English](./README.en.md)
 
@@ -20,7 +20,7 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 
 ✅ 공개됨 — [GitHub에서 공개 중](https://github.com/Maximiliana65/enterlude) (Claude / ChatGPT / Gemini, Chrome·Edge의 일반/시크릿 모드에서 동작 확인 완료)
 
-향후 계획은 [ROADMAP.md](./ROADMAP.md), 변경 이력은 [CHANGELOG.md](./CHANGELOG.md), 개발 과정은 [DEVLOG.md](./DEVLOG.md), 초기 설계 내용은 [docs/DESIGN.md](./docs/DESIGN.md)를 참고해 주세요.
+향후 계획은 [ROADMAP.md](./ROADMAP.md), 변경 이력은 [CHANGELOG.md](./CHANGELOG.md), 개발 과정은 [DEVLOG.md](./DEVLOG.md), 초기 설계 내용은 [docs/DESIGN.md](./docs/DESIGN.md), 개인정보처리방침은 [docs/privacy.ko.md](./docs/privacy.ko.md)를 참고해 주세요.
 
 ## 기능
 
@@ -96,7 +96,7 @@ git push origin main --tags
 
 ## 제한 사항
 
-- 이 확장 프로그램은 오전송을 줄이기 위한 **보조 도구**입니다. 모든 상황에서 오전송을 완전히 방지하는 것을 보장하지는 않습니다.
+- 이 확장 프로그램은 오발송을 줄이기 위한 **보조 도구**입니다. 모든 상황에서 오발송을 완전히 방지하는 것을 보장하지는 않습니다.
 - 지원 대상 AI 서비스(Claude / ChatGPT / Gemini)의 화면이 업데이트되면, 일시적으로 정상 동작하지 않을 수 있습니다.
 - 중요한 내용을 전송하기 전에는 다시 한 번 확인해 주세요.
 - 본 소프트웨어는 [MIT 라이선스](./LICENSE)에 따라 "있는 그대로(AS IS)" 제공되며, 어떠한 보증도 하지 않습니다.

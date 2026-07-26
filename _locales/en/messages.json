@@ -1,5 +1,5 @@
 {
-  "appName": { "message": "Enterlude - Accidental Send Prevention" },
+  "appName": { "message": "Enterlude - Prevent Accidental AI Chat Sends" },
   "appDescription": { "message": "Prevents accidental sends from a stray Enter key or button click" },
   "badgeLocked": { "message": "Locked" },
   "badgeUnlocked": { "message": "Ready to send" },

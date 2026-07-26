@@ -9,6 +9,21 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-07-26
+### 変更
+- 表示名(appName)のサブタイトルを、ストア掲載向けに調整
+  - 英語: "Enterlude - Accidental Send Prevention" → "Enterlude - Prevent Accidental AI Chat Sends"
+  - 韓国語: "Enterlude - AI 오전송 방지" → "Enterlude - AI 채팅 오발송 방지"（用語も「오발송」に統一）
+- README.ko.mdの「오전송」表記を「오발송」に統一
+
+### 追加
+- プライバシーポリシーを新規作成(`docs/privacy.md` / `.en.md` / `.ko.md`)。GitHub Pagesでの公開を想定
+- Chrome Web Store掲載用テキスト(`docs/store-listing.md`)を更新
+  - 名称をEnterlude名義に統一
+  - 「広告・有料機能・サブスクリプションなし」の一文を追加
+  - プライバシーポリシーURLの案内を追加
+- README(3言語)にプライバシーポリシーへのリンクを追加
+
 ## [1.0.0] - 2026-07-25
 ### 変更
 - プロジェクト名を「Send Guard」から**「Enterlude」**に改名（Enter + interlude=幕間、送信前の

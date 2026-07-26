@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.0.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 **日本語** | [English](./README.en.md) | [한국어](./README.ko.md)
 
@@ -22,7 +22,8 @@ AIチャット(Claude / ChatGPT / Gemini)で、うっかりEnterキーや送信�
 ✅ 公開済み — [GitHubで公開中](https://github.com/Maximiliana65/enterlude)（Claude / ChatGPT / Gemini、Chrome・Edgeの通常/シークレットモードで動作確認済み）
 
 対応予定は [ROADMAP.md](./ROADMAP.md) を、変更履歴は [CHANGELOG.md](./CHANGELOG.md) を、
-開発の過程は [DEVLOG.md](./DEVLOG.md) を、設計の詳細は [docs/DESIGN.md](./docs/DESIGN.md) をご覧ください。
+開発の過程は [DEVLOG.md](./DEVLOG.md) を、設計の詳細は [docs/DESIGN.md](./docs/DESIGN.md) を、
+プライバシーポリシーは [docs/privacy.md](./docs/privacy.md) をご覧ください。
 
 ## できること
 
