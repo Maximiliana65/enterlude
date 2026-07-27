@@ -1,6 +1,7 @@
 # Chrome Web Store 掲載用テキスト
 
 コピー＆ペーストしてご利用ください。
+「実際に提出した文言」は2026-07-27の再申請時のものを反映しています。
 
 ---
 
@@ -30,10 +31,10 @@ AIチャット(Claude/ChatGPT/Gemini)の誤送信を防ぐ拡張機能。Enter�
 ## 詳しい説明
 
 ```
-AIチャット(Claude / ChatGPT / Gemini)で、書きかけのメッセージをうっかり送信してしまう事故を防ぐ拡張機能です。
+AIチャット（Claude / ChatGPT / Gemini）で、Enterキーや送信ボタンの誤操作による書きかけメッセージの誤送信を防ぐ拡張機能です。
 
 ■ できること
-・Enterキーは常に改行だけになり、誤って送信されることがありません
+・ロック中はEnterキーでは送信されず、改行のみになります
 ・送信したい時だけ、右下の🔒アイコンをクリック(またはCtrl+Shift+U)でロックを解除
 ・解除は次の1回だけ有効。送信すると自動でまたロックがかかります
 ・Escキーでロック解除をキャンセルできます
@@ -69,23 +70,25 @@ https://github.com/Maximiliana65/enterlude
 
 ## プライバシーポリシーURL
 
-ストアの申請画面にある「Privacy policy URL」欄には、以下を入力してください
-(GitHub Pagesを有効にした後にアクセスできるようになります。有効化の手順は別途案内します)。
+ストアの申請画面にある「Privacy policy URL」欄には、以下を入力してください。
 
 ```
 https://maximiliana65.github.io/enterlude/privacy.html
 ```
 
-## プライバシー関連の申告(Privacyタブ)
-
-ストアの「Privacy practices」タブで聞かれる項目には、以下のように答えれば問題ありません。
+## プライバシー関連の申告(Privacyタブ) — 実際に提出した文言
 
 - ユーザーデータの収集: なし
-- 単一目的(Single purpose)の説明例:
+- 単一目的(Single purpose)の説明:
   ```
-  AIチャットサービスでのEnterキー・送信ボタンによる誤送信を防止する
+  AIチャットサービスでのEnterキーや送信ボタンによる誤送信を防止します。
   ```
-- 権限の説明(Permission justification):
-  - `storage`: お楽しみ機能のON/OFF設定・言語設定を保存するために使用します
-  - host_permissions(claude.ai, chatgpt.com, gemini.google.com): これらのサイトの入力欄・送信ボタンを検知し、誤送信を防止するために使用します
+- `storage`が必要な理由:
+  ```
+  拡張機能の設定（お楽しみ機能のON/OFF、コメント表示言語）をブラウザ内に保存するために使用します。
+  ```
+- ホスト権限が必要な理由:
+  ```
+  host_permissions(claude.ai, chatgpt.com / chat.openai.com, gemini.google.com): 対応しているAIチャットサービス（Claude、ChatGPT、Gemini）のページ上で入力欄や送信ボタンを検出し、誤送信防止機能を提供するために使用します。
+  ```
 - 広告・課金・サブスクリプション: なし

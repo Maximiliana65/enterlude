@@ -10,7 +10,7 @@ Enterlude does not collect, store, or transmit any personal data. It does not re
 
 ## What Is Stored
 
-Only the following settings are stored, locally in your browser (via Chrome's `storage` API):
+Only the following settings are stored locally in your browser, using the Chrome Storage API (`chrome.storage.sync`):
 
 - Whether the fun-comment feature is turned on
 - Your chosen language for fun comments
