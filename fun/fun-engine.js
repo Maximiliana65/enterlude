@@ -34,13 +34,15 @@ window.Enterlude.funEngine = {
     const sets = window.EnterludeComments || {};
     let lang = overrideLang;
     if (!lang || lang === 'auto') {
-      lang = (window.Enterlude.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja').toLowerCase();
+      lang = window.Enterlude.domUtils.safeCall(() => chrome.i18n.getUILanguage(), 'ja') || 'ja';
     }
+    lang = lang.toLowerCase();
     let preferred;
     if (lang.startsWith('ja')) preferred = sets.ja;
     else if (lang.startsWith('ko')) preferred = sets.ko;
+    else if (lang.startsWith('zh-tw') || lang.startsWith('zh-hant')) preferred = sets.zhTW;
     else preferred = sets.en;
-    return preferred || sets.ja || sets.en || sets.ko || [];
+    return preferred || sets.ja || sets.en || sets.ko || sets.zhTW || [];
   },
 
   // 今日の日付が、コメントの season(期間指定)に当てはまるか判定する
