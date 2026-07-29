@@ -684,3 +684,44 @@ Claudeとこのプロジェクトを作っていく過程のメモです。
 - Chrome Web Storeの審査結果を待つ。結果が出たら、指摘対応版(+zh-TW対応)をまとめて
   Chromeの更新 → Edgeへの新規申請、の順で進める
 - 未着手の要望: 印刷時にロックバッジを非表示にする、ポップアップに閉じる(×)ボタンを実装する
+
+---
+
+## 2026-07-29　印刷時のバッジ非表示、ポップアップの閉じるボタン実装(v1.2.0)
+
+### 新しいスレッドへの引き継ぎ
+- 別スレッドから初めて合流。GitHub(Public)のクローンと、ユーザー提供のgit bundleの両方から
+  状況を確認。DEVLOG/CHANGELOG/ROADMAP/READMEを読んで経緯を把握してから作業開始
+
+### 実装したこと
+- `core/lock-ui.css`に`@media print`ルールを追加し、印刷時に`.sg-badge`(ロックバッジ)と
+  `.sg-toast`(お楽しみコメントのトースト)を非表示にした
+- ポップアップ(`popup/`)右上に閉じる(×)ボタンを追加
+  - `popup.html`にボタン要素を追加、`popup.css`でスタイリング(ホバー・フォーカスリング含む)
+  - `popup.js`で`window.close()`を紐付け。同時に、aria-label用の新しいi18nパターン
+    (`data-i18n-aria`属性)を追加し、既存の`data-i18n`(textContent用)と使い分けられるようにした
+  - `_locales`のja/en/koに`closeButtonAria`キーを追加
+  - 実装前にVisualizerでプレビューを提示し、了承を得てから着手(ユーザーとの約束通り)
+
+### ついでに見つけた不具合の修正
+- `core/lock-ui.css`を見ていて、Enterludeへの改名時(`data-send-guard-unlocked`等を
+  `data-enterlude-*`に統一した際)に、狭い画面幅×Gemini利用時のバッジ位置調整用セレクタ
+  `data-send-guard-site`だけ取り残されているのを発見。`content-main.js`側は既に
+  `data-enterlude-site`を設定しているため、このCSSルールは実質死んでいた
+  (実害は軽微: 狭い画面でGeminiを使う時、バッジが送信ボタンと重なる可能性があった程度)
+- `data-enterlude-site`に修正。ユーザーに発見経緯を報告済み
+
+### 動作確認
+- Node.js + jsdomでモックテストを実施(popup.htmlをロードし、chrome.i18n/chrome.storageを
+  モック化)。閉じるボタンの存在・aria-label反映・クリック時の`window.close()`呼び出し、
+  既存のh1タイトルi18n(リグレッション確認)、`lock-ui.css`の`@media print`ブロックの中身、
+  および上記の不具合修正箇所を含め、計10項目すべてPASSを確認
+
+### バージョン管理
+- 後方互換性のある機能追加のため、MINORバージョンアップ: v1.1.0 → v1.2.0
+- `manifest.json`のバージョンを更新、CHANGELOGに追記
+
+### 次回への申し送り
+- Chrome Web Storeの審査結果はまだ待ち。結果が出たら、指摘対応版(+zh-TW対応 + 今回のv1.2.0の
+  変更)をまとめてChromeの更新 → Edgeへの新規申請、の順で進める予定は変わらず
+- 今回の変更はGitHubのみ反映。ストアへの反映タイミングは引き続き審査結果待ち

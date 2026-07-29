@@ -91,11 +91,21 @@
    実機確認で分かったため、Geminiだけ狭い画面でさらに強めに上へずらす。
    通常の(狭くない)画面幅では、他サイトと同じ右下の位置のまま。 */
 @media (max-width: 1200px) {
-  html[data-send-guard-site="gemini"] .sg-badge {
+  html[data-enterlude-site="gemini"] .sg-badge {
     bottom: 130px;
   }
 
-  html[data-send-guard-site="gemini"] .sg-toast {
+  html[data-enterlude-site="gemini"] .sg-toast {
     bottom: 168px;
+  }
+}
+
+/* 印刷時、ロックバッジとトーストは実際の会話内容ではないため、
+   紙面に残らないよう非表示にする。@media print はページの表示状態に
+   関わらず印刷プレビュー・実際の印刷の両方に効く。 */
+@media print {
+  .sg-badge,
+  .sg-toast {
+    display: none !important;
   }
 }

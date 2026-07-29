@@ -5,6 +5,7 @@
   "badgeUnlocked": { "message": "送信OK" },
   "badgeTooltip": { "message": "クリックで次の1回だけ送信できます（Ctrl+Shift+Uでも解除可）" },
   "popupTitle": { "message": "Enterlude 設定" },
+  "closeButtonAria": { "message": "閉じる" },
   "popupSubtitle": { "message": "うっかり送信を防ぐための拡張機能" },
   "funRowTitle": { "message": "お楽しみ機能" },
   "funRowDesc": { "message": "送信後に一言コメントを表示します" },

@@ -6,6 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (text) el.textContent = text;
   });
 
+  // data-i18n-aria がついた要素は、textContent ではなく aria-label に反映する
+  document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-aria');
+    const text = chrome.i18n.getMessage(key);
+    if (text) el.setAttribute('aria-label', text);
+  });
+
+  document.getElementById('closeBtn').addEventListener('click', () => {
+    window.close();
+  });
+
   const funToggle = document.getElementById('funToggle');
   const commentLangSelect = document.getElementById('commentLangSelect');
 

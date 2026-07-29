@@ -5,6 +5,7 @@
   "badgeUnlocked": { "message": "Ready to send" },
   "badgeTooltip": { "message": "Click to allow one send (or press Ctrl+Shift+U)" },
   "popupTitle": { "message": "Enterlude Settings" },
+  "closeButtonAria": { "message": "Close" },
   "popupSubtitle": { "message": "Prevents accidental sends" },
   "funRowTitle": { "message": "Fun reactions" },
   "funRowDesc": { "message": "Show a short comment after each send" },

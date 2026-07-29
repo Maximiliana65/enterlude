@@ -5,6 +5,7 @@
   "badgeUnlocked": { "message": "전송 가능" },
   "badgeTooltip": { "message": "클릭하면 다음 1회만 전송할 수 있습니다 (Ctrl+Shift+U로도 해제 가능)" },
   "popupTitle": { "message": "Enterlude 설정" },
+  "closeButtonAria": { "message": "닫기" },
   "popupSubtitle": { "message": "실수로 전송되는 것을 막는 확장 프로그램" },
   "funRowTitle": { "message": "재미 기능" },
   "funRowDesc": { "message": "전송 후 짧은 코멘트를 표시합니다" },
