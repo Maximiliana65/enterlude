@@ -9,6 +9,17 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-07-29
+### 修正
+- ChatGPTで実際に使われている`core/chatgpt-page-guard.js`のRETRY_SELECTORに
+  「再生成」ラベルが抜けていたのを修正。日本語UIのChatGPTで、ロック中でも
+  再生成ボタンのクリックが素通りしてしまう不具合を解消
+  (`adapters/chatgpt.js`側には元々含まれていたが、実際に動く方に反映されていなかった)
+- Claude.aiの`core/content-main.js`に、IME変換確定中のEnter判定
+  (`event.isComposing` / `keyCode === 229`)を追加。日本語・韓国語入力中の
+  変換確定のためのEnterが、誤って改行挿入として扱われてしまう可能性があった不具合を解消
+  (ChatGPT/Gemini用の専用ガードには既に同様の対策が入っていたが、Claude.ai側は未対応だった)
+
 ## [1.2.0] - 2026-07-29
 ### 追加
 - 印刷時にロックバッジ・トースト通知が紙面に残らないよう、`@media print`で非表示にした(`core/lock-ui.css`)

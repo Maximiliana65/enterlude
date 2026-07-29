@@ -17,6 +17,7 @@
   ].join(',');
   const RETRY_SELECTOR = [
     'button[aria-label*="Regenerate" i]',
+    'button[aria-label*="再生成" i]',
     'button[aria-label*="Try again" i]',
     'button[aria-label*="再試行" i]'
   ].join(',');

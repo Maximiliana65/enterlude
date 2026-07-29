@@ -725,3 +725,44 @@ Claudeとこのプロジェクトを作っていく過程のメモです。
 - Chrome Web Storeの審査結果はまだ待ち。結果が出たら、指摘対応版(+zh-TW対応 + 今回のv1.2.0の
   変更)をまとめてChromeの更新 → Edgeへの新規申請、の順で進める予定は変わらず
 - 今回の変更はGitHubのみ反映。ストアへの反映タイミングは引き続き審査結果待ち
+
+---
+
+## 2026-07-29　別スレッドのコードレビュー反映(v1.2.1)
+
+### 経緯
+- ユーザーが別スレッドのClaudeにコードレビューを依頼し、結果を🔴🟡🟢の3段階でまとめて共有。
+  🔴の3件のうち、3番目(Claude.aiの入力欄判定`div[contenteditable="true"]`が広すぎる懸念)は
+  ユーザーが実機確認済みで、メッセージ編集画面でも改行にならず確定できることを確認。
+  今回は🔴の1・2番目を対応
+
+### 修正したこと(実コードで再現・確認した上で対応)
+- **🔴1: ChatGPTの「再生成」ボタンがロック中でも押せてしまう不具合**
+  - `adapters/chatgpt.js`(表向きの定義)と`core/chatgpt-page-guard.js`(実際に動く方)の
+    RETRY_SELECTORを見比べ、指摘通り後者に「再生成」ラベルが抜けていることを確認
+  - `core/chatgpt-page-guard.js`に追加して解消。念のため`core/gemini-page-guard.js`と
+    `adapters/gemini.js`も同様のズレがないか比較したが、こちらは完全に一致しており問題なし
+- **🔴2: Claude.aiで日本語入力の変換確定Enterが誤って改行扱いになる可能性**
+  - `core/content-main.js`のkeydownハンドラに`isComposing`チェックが欠けていることを確認
+    (ChatGPT/Gemini専用ガードには既にあった)。同じ書き方で1行追加して解消
+
+### 動作確認
+- Node.js + jsdomでモックテストを新規作成(`test-fixes.js`)。以下を確認:
+  - ChatGPT: 「再生成」ボタンがロック中にクリックされた際、preventDefaultされることを確認
+  - ChatGPT: 既存の"Regenerate"ラベルも引き続き機能すること(リグレッション確認)
+  - Claude.ai: `isComposing: true`および`keyCode: 229`のEnterが、preventDefaultされず
+    execCommandも呼ばれないこと(=サイト本来のIME確定動作を妨げない)
+  - Claude.ai: 通常のEnter(変換中でない)は、ロック中なら引き続きブロックされ改行が
+    挿入されること(リグレッション確認)
+  - 念のため、修正前のコード(直前のコミット)に対して同じテストを実行し、修正前は
+    アサーションが成立しない(=バグを検知できる)ことも確認した上で、修正後は全7項目PASS
+
+### バージョン管理
+- 後方互換性のあるバグ修正のため、PATCHバージョンアップ: v1.2.0 → v1.2.1
+
+### 次回への申し送り
+- 🟡・🟢に分類された残りの指摘(page-guard.jsとadapters/*.jsの重複コード整理、
+  popup.jsの設定読み書きをsettings-store.js経由に統一、execCommandの非推奨対応、
+  zh-TWのUI文言未対応など)は、優先度が高くないため今回は未対応。今後どこかで
+  まとめて着手するか、都度ユーザーと相談して進める
+- Chrome Web Storeの審査結果待ちは変わらず

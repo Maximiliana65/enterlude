@@ -147,6 +147,9 @@
       }
 
       if (event.key !== 'Enter') return;
+      // 日本語・韓国語などの変換確定のためのEnterは、送信の意図ではないため無視する
+      // (isComposingが未対応の環境向けに、IME確定時のkeyCode 229も合わせて見る)
+      if (event.isComposing || event.keyCode === 229) return;
       if (!adapter.isComposerElement(event.target)) return;
 
       // Shift+Enter は元々の「改行」動作なので、そのままサイトに任せる
