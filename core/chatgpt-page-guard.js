@@ -6,21 +6,28 @@
   'use strict';
 
   if (window.__enterludeChatGPTPageGuardInstalled) return;
-  window.__enterludeChatGPTPageGuardInstalled = true;
 
   const STATE_ATTRIBUTE = 'data-enterlude-unlocked';
-  const COMPOSER_SELECTOR = '#prompt-textarea[contenteditable="true"], #prompt-textarea';
-  const SEND_SELECTOR = [
-    'button[data-testid="send-button"]',
-    'button[aria-label*="Send" i]',
-    'button[aria-label*="送信" i]'
-  ].join(',');
-  const RETRY_SELECTOR = [
-    'button[aria-label*="Regenerate" i]',
-    'button[aria-label*="再生成" i]',
-    'button[aria-label*="Try again" i]',
-    'button[aria-label*="再試行" i]'
-  ].join(',');
+  // manifestでは chatgpt-selectors.js を先に読み込むが、MAIN worldでは
+  // ページ遷移直後に定義がまだ見えないことがある。未定義のまま分割代入して
+  // ガード全体が止まらないよう、ここにも動作に必要な最小限の予備定義を置く。
+  const selectors = window.EnterludeChatGPTSelectors || {
+    COMPOSER_SELECTOR: '#prompt-textarea[contenteditable="true"], #prompt-textarea',
+    SEND_SELECTOR: [
+      'button[data-testid="send-button"]',
+      'button[aria-label*="Send" i]',
+      'button[aria-label*="送信" i]'
+    ].join(','),
+    RETRY_SELECTOR: [
+      'button[aria-label*="Regenerate" i]',
+      'button[aria-label*="再生成" i]',
+      'button[aria-label*="Try again" i]',
+      'button[aria-label*="再試行" i]'
+    ].join(',')
+  };
+  const { COMPOSER_SELECTOR, SEND_SELECTOR, RETRY_SELECTOR } = selectors;
+
+  window.__enterludeChatGPTPageGuardInstalled = true;
 
   function isUnlocked() {
     return document.documentElement.getAttribute(STATE_ATTRIBUTE) === 'true';

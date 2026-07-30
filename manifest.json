@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_appName__",
   "description": "__MSG_appDescription__",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "default_locale": "ja",
   "permissions": [
     "storage"
@@ -20,6 +20,7 @@
         "https://chat.openai.com/*"
       ],
       "js": [
+        "core/chatgpt-selectors.js",
         "core/chatgpt-page-guard.js"
       ],
       "run_at": "document_start",
@@ -30,6 +31,7 @@
         "https://gemini.google.com/*"
       ],
       "js": [
+        "core/gemini-selectors.js",
         "core/gemini-page-guard.js"
       ],
       "run_at": "document_start",
@@ -70,6 +72,7 @@
         "fun/comments.ko.js",
         "fun/comments.zh-TW.js",
         "fun/fun-engine.js",
+        "core/chatgpt-selectors.js",
         "adapters/chatgpt.js",
         "core/content-main.js"
       ],
@@ -91,6 +94,7 @@
         "fun/comments.ko.js",
         "fun/comments.zh-TW.js",
         "fun/fun-engine.js",
+        "core/gemini-selectors.js",
         "adapters/gemini.js",
         "core/content-main.js"
       ],

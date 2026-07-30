@@ -9,6 +9,24 @@
 
 ## [Unreleased]
 
+## [1.2.3] - 2026-07-30
+### 修正
+- ChatGPT・Geminiでロックが効かなくなることがある問題を修正
+  - MAIN world用ガードがセレクタ定義の読み込み順に依存しており、定義が未準備の場合に起動時エラーで停止していた
+  - MAIN worldガードと通常側アダプターの両方に安全な予備セレクタを持たせ、セレクタ定義が一時的に未定義でもロック機能・バッジ表示を継続できるよう変更
+
+## [1.2.2] - 2026-07-29
+### 変更
+- ChatGPT・Gemini向けのセレクタ定義(入力欄・送信ボタン・再試行ボタン)を、
+  サイトごとに新設した`core/chatgpt-selectors.js`・`core/gemini-selectors.js`に一本化
+  - これまで`adapters/chatgpt.js`・`adapters/gemini.js`(ISOLATED world)と
+    `core/chatgpt-page-guard.js`・`core/gemini-page-guard.js`(MAIN world)に
+    同じ内容のセレクタが別々に書かれており、前回のv1.2.1の不具合(🔴1)の直接の原因になっていた
+  - `manifest.json`を変更し、両worldへそれぞれ新設ファイルを読み込むよう追加
+  - `adapters/*.js`側の判定ロジック(`isComposerElement`等)は、ChatGPT・Geminiでは
+    実際には呼び出されない(死んだコード)ことを確認済み。将来MAIN worldガードをやめる
+    可能性に備えてロジック自体は残しつつ、その旨をコメントで明記した
+
 ## [1.2.1] - 2026-07-29
 ### 修正
 - ChatGPTで実際に使われている`core/chatgpt-page-guard.js`のRETRY_SELECTORに

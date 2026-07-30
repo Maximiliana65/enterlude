@@ -5,26 +5,33 @@
   'use strict';
 
   if (window.__enterludeGeminiPageGuardInstalled) return;
-  window.__enterludeGeminiPageGuardInstalled = true;
 
   const STATE_ATTRIBUTE = 'data-enterlude-unlocked';
-  const COMPOSER_SELECTOR = 'rich-textarea .ql-editor[contenteditable="true"], rich-textarea [contenteditable="true"]';
-  const SEND_SELECTOR = [
-    'button[aria-label*="Send" i]',
-    'button[aria-label*="送信" i]',
-    'button[aria-label*="Submit" i]'
-  ].join(',');
-  const RETRY_SELECTOR = [
-    'button[aria-label*="Regenerate" i]',
-    'button[aria-label*="Retry" i]',
-    'button[aria-label*="再生成" i]',
-    'button[aria-label*="Try again" i]',
-    'button[aria-label*="再試行" i]',
-    'button[aria-label*="やり直" i]',
-    'button[mattooltip*="やり直" i]',
-    'button[data-tooltip*="やり直" i]',
-    'button[title*="やり直" i]'
-  ].join(',');
+  // manifestでは gemini-selectors.js を先に読み込むが、MAIN worldではページ遷移の
+  // タイミング次第でまだ定義されていないことがある。ここで例外が出るとロックが
+  // まったく効かなくなるため、ガード単体でも動く予備定義を用意する。
+  const selectors = window.EnterludeGeminiSelectors || {
+    COMPOSER_SELECTOR: 'rich-textarea .ql-editor[contenteditable="true"], rich-textarea [contenteditable="true"]',
+    SEND_SELECTOR: [
+      'button[aria-label*="Send" i]',
+      'button[aria-label*="送信" i]',
+      'button[aria-label*="Submit" i]'
+    ].join(','),
+    RETRY_SELECTOR: [
+      'button[aria-label*="Regenerate" i]',
+      'button[aria-label*="Retry" i]',
+      'button[aria-label*="再生成" i]',
+      'button[aria-label*="Try again" i]',
+      'button[aria-label*="再試行" i]',
+      'button[aria-label*="やり直" i]',
+      'button[mattooltip*="やり直" i]',
+      'button[data-tooltip*="やり直" i]',
+      'button[title*="やり直" i]'
+    ].join(',')
+  };
+  const { COMPOSER_SELECTOR, SEND_SELECTOR, RETRY_SELECTOR } = selectors;
+
+  window.__enterludeGeminiPageGuardInstalled = true;
 
   function isUnlocked() {
     return document.documentElement.getAttribute(STATE_ATTRIBUTE) === 'true';

@@ -766,3 +766,46 @@ Claudeとこのプロジェクトを作っていく過程のメモです。
   zh-TWのUI文言未対応など)は、優先度が高くないため今回は未対応。今後どこかで
   まとめて着手するか、都度ユーザーと相談して進める
 - Chrome Web Storeの審査結果待ちは変わらず
+
+---
+
+## 2026-07-29　コードレビュー指摘🟡4番: セレクタ定義の一本化(v1.2.2)
+
+### 経緯
+- 前回のレビュー指摘🟡4番(ChatGPT・Gemini用の判定ロジックが死んだコードになっている件)に対応。
+  ユーザーに「コメントで明記するだけ」と「セレクタを1箇所にまとめる」の2案を提示して相談し、
+  再発防止を優先して後者を選んでいただいた
+
+### 実装したこと
+- `core/chatgpt-selectors.js`・`core/gemini-selectors.js`を新設し、
+  COMPOSER_SELECTOR / SEND_SELECTOR / RETRY_SELECTORをサイトごとに1箇所へ集約
+  - 内容は、実際に動いている`core/*-page-guard.js`側の(実機で確認済みの)定義を正とした
+  - MAIN worldとISOLATED worldは別々のJS実行環境なので変数そのものは共有できないが、
+    同じファイルを両方のworldに読み込ませることで「直す場所は1箇所」を実現している
+- `manifest.json`の該当4箇所(MAIN world×2、ISOLATED world×2)に、新設ファイルを
+  対応するpage-guard/adapterより前の順番で追加
+- `adapters/chatgpt.js`・`adapters/gemini.js`は、共有セレクタを参照する形に変更した上で、
+  「ChatGPT/Geminiでは実際には呼ばれない(死んだコード)」旨と、その理由・残している意図を
+  コメントで明記した
+
+### 動作確認
+- Node.js + jsdomで新規モックテスト(`test-consolidation.js`、21項目)を実施:
+  - `manifest.json`で、セレクタファイルがpage-guard/adapterより前に読み込まれる順番に
+    なっていることを確認
+  - MAIN world側(page-guard.js)・ISOLATED world側(adapters/*.js)それぞれで、
+    セレクタファイルと組み合わせてエラーなく動作し、ボタン判定が引き続き正しいこと
+    (リグレッション確認)
+  - 4ファイルすべてで、セレクタ配列のハードコードが残っていない(参照のみになった)ことを確認
+- 前回作成した`test-fixes.js`・`test-popup.js`も再実行し、既存の28項目すべてPASSを再確認
+  (test-fixes.jsは、production側のスクリプト読み込み順に合わせてセレクタファイルの
+  読み込みを追加する必要があったため、テスト側も更新した)
+- 計49項目すべてPASS
+
+### バージョン管理
+- 挙動を変えないリファクタリングだが、コードの再発防止という実質的な改善のため
+  PATCHバージョンアップ: v1.2.1 → v1.2.2
+
+### 次回への申し送り
+- 残りの🟡・🟢(popup.jsの設定読み書き統一、execCommand非推奨対応、zh-TWのUI文言未対応など)は
+  引き続き未対応。優先度含めユーザーと相談しながら進める
+- Chrome Web Storeの審査結果待ちは変わらず
