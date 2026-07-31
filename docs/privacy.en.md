@@ -2,7 +2,7 @@
 
 Last updated: July 27, 2026
 
-[日本語](./privacy.md) | English | [한국어](./privacy.ko.md)
+[日本語](./privacy.md) | English | [한국어](./privacy.ko.md) | [繁體中文](./privacy.zh-TW.md)
 
 ## Data Collection
 

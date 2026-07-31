@@ -2,18 +2,19 @@
 
 **現在地**: フェーズ1〜4すべて完了、[GitHubで公開中](https://github.com/Maximiliana65/enterlude)です。
 ✅ **「Enterlude」への改名完了**（v1.0.0。GitHubリポジトリ名も`enterlude`に変更済み）。
-残っているのは、Chrome Web Storeの新名称での再申請と、任意項目（Edgeアドオンストア登録）です。
+✅ **Chrome Web Storeの審査通過**（2026-07-29、Enterlude名義でv1.0.1を公開）。
+残っているのは、指摘対応版のChrome Web Store再申請と、Edge Add-onsへの初回申請です。
 
 ## 配信状況
 
-GitHub(main)の方が、審査中のストアより新しい状態になるのは自然なことなので、
+GitHub(main)の方が、審査中・提出前のストアより新しい状態になるのは自然なことなので、
 「どのタグをどこに出したか」をここで管理する。
 
 | 場所 | バージョン | 状態 |
 |---|---|---|
-| GitHub (main) | v1.0.1+(zh-TW対応など) | 開発中の最新 |
-| Chrome Web Store | v1.0.1 | 審査中(Enterlude名義で再申請済み、2026-07-27) |
-| Edge Add-ons | 未申請 | Chromeの審査結果を見てから、指摘対応済みバージョンで申請予定 |
+| GitHub (main) | v1.2.3+(台湾版README/プライバシーポリシー追加など) | 開発中の最新 |
+| Chrome Web Store | v1.0.1 | **審査通過・公開中**(2026-07-29) |
+| Edge Add-ons | 未申請 | GitHub側の動作確認が済み次第、Chrome(2回目)と同時に申請予定 |
 
 ## フェーズ1: Claude.aiで動くコア機能
 - [x] 全体設計（コア / サイトアダプター / お楽しみプラグインの3層構造）

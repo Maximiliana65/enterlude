@@ -4,9 +4,9 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.1.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.3.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
-한국어 | [日本語](./README.md) | [English](./README.en.md)
+한국어 | [日本語](./README.md) | [English](./README.en.md) | [繁體中文](./README.zh-TW.md)
 
 AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 눌러, 작성 중이던 메시지가 그대로 전송되는 사고를 막아주는 Chrome/Edge 확장 프로그램입니다.
 

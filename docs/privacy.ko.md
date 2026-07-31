@@ -2,7 +2,7 @@
 
 최종 수정일: 2026년 7월 27일
 
-[日本語](./privacy.md) | [English](./privacy.en.md) | 한국어
+[日本語](./privacy.md) | [English](./privacy.en.md) | 한국어 | [繁體中文](./privacy.zh-TW.md)
 
 ## 데이터 수집에 대하여
 
