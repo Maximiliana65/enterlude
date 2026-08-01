@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 繁體中文 | [日本語](./README.md) | [English](./README.en.md) | [한국어](./README.ko.md)
 
