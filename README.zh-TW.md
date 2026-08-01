@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.2-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 繁體中文 | [日本語](./README.md) | [English](./README.en.md) | [한국어](./README.ko.md)
 
@@ -18,7 +18,22 @@ Enterlude 是一款 Chrome/Edge 擴充功能，可防止您在 AI 聊天（Claud
 
 ## 目前狀態
 
-✅ 已發布 — [GitHub 上線中](https://github.com/Maximiliana65/enterlude)（已在 Claude / ChatGPT / Gemini，Chrome 與 Edge 的一般／隱私模式下完成驗證）
+✅ 已發布 — [GitHub 上線中](https://github.com/Maximiliana65/enterlude)
+
+**支援服務**
+- Claude
+- ChatGPT
+- Gemini
+
+**支援瀏覽器**
+- Google Chrome
+- Microsoft Edge(Chromium 核心)
+
+**測試環境**
+- OS：Windows 11 Home
+- 瀏覽器：Google Chrome / Microsoft Edge(一般模式與隱私模式皆已確認)
+
+※上述以外的OS・環境，開發者尚未進行測試確認。
 
 規劃內容請參考 [ROADMAP.md](./ROADMAP.md)，變更紀錄請參考 [CHANGELOG.md](./CHANGELOG.md)，開發過程請參考 [DEVLOG.md](./DEVLOG.md)，原始設計文件請參考 [docs/DESIGN.md](./docs/DESIGN.md)，隱私權政策請參考 [docs/privacy.zh-TW.md](./docs/privacy.zh-TW.md)。
 

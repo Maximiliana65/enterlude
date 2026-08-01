@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.1-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.2-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 한국어 | [日本語](./README.md) | [English](./README.en.md) | [繁體中文](./README.zh-TW.md)
 
@@ -18,7 +18,22 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 
 ## 현재 상태
 
-✅ 공개됨 — [GitHub에서 공개 중](https://github.com/Maximiliana65/enterlude) (Claude / ChatGPT / Gemini, Chrome·Edge의 일반/시크릿 모드에서 동작 확인 완료)
+✅ 공개됨 — [GitHub에서 공개 중](https://github.com/Maximiliana65/enterlude)
+
+**지원 서비스**
+- Claude
+- ChatGPT
+- Gemini
+
+**지원 브라우저**
+- Google Chrome
+- Microsoft Edge(Chromium 기반)
+
+**동작 확인 환경**
+- OS: Windows 11 Home
+- 브라우저: Google Chrome / Microsoft Edge(일반 모드・시크릿 모드 모두 확인 완료)
+
+※위 환경 이외에서는 개발자가 직접 동작을 확인하지 않았습니다.
 
 향후 계획은 [ROADMAP.md](./ROADMAP.md), 변경 이력은 [CHANGELOG.md](./CHANGELOG.md), 개발 과정은 [DEVLOG.md](./DEVLOG.md), 초기 설계 내용은 [docs/DESIGN.md](./docs/DESIGN.md), 개인정보처리방침은 [docs/privacy.ko.md](./docs/privacy.ko.md)를 참고해 주세요.
 
