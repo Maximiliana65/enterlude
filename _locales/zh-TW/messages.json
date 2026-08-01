@@ -1,0 +1,18 @@
+{
+  "appName": { "message": "Enterlude - 防止 AI 聊天誤傳訊息" },
+  "appDescription": { "message": "防止因不小心按下 Enter 鍵或按鈕而誤傳訊息的擴充功能" },
+  "badgeLocked": { "message": "鎖定中" },
+  "badgeUnlocked": { "message": "可傳送" },
+  "badgeTooltip": { "message": "點擊即可傳送一次（或按 Ctrl+Shift+U 解鎖）" },
+  "popupTitle": { "message": "Enterlude 設定" },
+  "closeButtonAria": { "message": "關閉" },
+  "popupSubtitle": { "message": "防止誤傳的擴充功能" },
+  "funRowTitle": { "message": "趣味留言" },
+  "funRowDesc": { "message": "傳送後顯示一句簡短留言" },
+  "commentLangLabel": { "message": "留言語言" },
+  "commentLangDesc": { "message": "不需變更瀏覽器語言，也能測試留言顯示" },
+  "commentLangAuto": { "message": "自動（依瀏覽器語言）" },
+  "hintUnlock": { "message": "解鎖：點擊 🔒 圖示 / Ctrl+Shift+U" },
+  "hintCancel": { "message": "取消：Esc 鍵" },
+  "hintPin": { "message": "💡 將此擴充功能固定在工具列，下次點一下就能開啟" }
+}

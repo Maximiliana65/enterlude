@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.3.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 **日本語** | [English](./README.en.md) | [한국어](./README.ko.md) | [繁體中文](./README.zh-TW.md)
 
@@ -58,7 +58,7 @@ adapters/   … サイトごとの「入力欄・送信ボタンの場所」の�
 fun/        … お楽しみ機能（一言コメントなど。comments.ja.js / comments.en.js / comments.ko.jsを
               ブラウザの表示言語に応じて自動的に切り替え。設定画面から手動指定も可能）
 popup/      … 拡張機能アイコンから開く設定画面
-_locales/   … 多言語対応のための表示文言（現在: 日本語・英語・韓国語）
+_locales/   … 多言語対応のための表示文言（現在: 日本語・英語・韓国語・繁体字中国語）
 icons/      … 拡張機能アイコン（ツールバー表示用。視認性重視のシンプルな鍵デザイン）
 docs/       … 設計資料・スクリーンショット・ブランド用ロゴなど
 ```

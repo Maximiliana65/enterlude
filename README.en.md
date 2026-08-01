@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.3.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.0-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 English | [日本語](./README.md) | [한국어](./README.ko.md) | [繁體中文](./README.zh-TW.md)
 
@@ -56,7 +56,7 @@ fun/        … the optional fun-comment feature (comments.ja.js / comments.en.j
               comments.ko.js, picked automatically based on the browser's UI language,
               or overridden manually from the settings screen)
 popup/      … the settings screen opened from the toolbar icon
-_locales/   … UI strings for i18n (currently Japanese, English, and Korean)
+_locales/   … UI strings for i18n (currently Japanese, English, Korean, and Traditional Chinese)
 icons/      … toolbar icon (a simple lock, chosen for legibility at small sizes)
 docs/       … design notes, screenshots, brand assets
 ```

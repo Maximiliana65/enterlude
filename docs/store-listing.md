@@ -11,11 +11,12 @@
 Enterlude - AI誤送信防止
 ```
 
-英語版・韓国語版のストア掲載を別途用意する場合は、こちらを使ってください。
+英語版・韓国語版・繁体字中国語版のストア掲載を別途用意する場合は、こちらを使ってください。
 
 ```
-English:  Enterlude - Prevent Accidental AI Chat Sends
-한국어:   Enterlude - AI 채팅 오발송 방지
+English:     Enterlude - Prevent Accidental AI Chat Sends
+한국어:      Enterlude - AI 채팅 오발송 방지
+繁體中文:    Enterlude - 防止 AI 聊天誤傳訊息
 ```
 
 ---
