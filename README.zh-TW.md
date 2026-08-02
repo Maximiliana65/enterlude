@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.2-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 繁體中文 | [日本語](./README.md) | [English](./README.en.md) | [한국어](./README.ko.md)
 
@@ -106,7 +106,9 @@ git push origin main --tags
 - Gemini（網頁版／gemini.google.com 主畫面）
 
 **目前不支援**
-- Chrome 內建的「Gemini 側邊欄」功能 — 這似乎是 Chrome 瀏覽器本身的原生功能，而非一般網頁，運作方式從根本上不同，因此目前尚未支援。
+- 支援對象是各服務的一般網頁(claude.ai / chatgpt.com / gemini.google.com)。瀏覽器自身的
+  側邊欄或內建 AI 畫面(例如 Chrome 的「Gemini 側邊欄」、Microsoft Edge 的「Copilot」)，
+  由於是與一般網頁運作方式根本不同的瀏覽器原生功能，因此不支援。
 
 ## 限制事項
 

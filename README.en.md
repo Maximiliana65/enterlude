@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.2-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 English | [日本語](./README.md) | [한국어](./README.ko.md) | [繁體中文](./README.zh-TW.md)
 
@@ -106,9 +106,10 @@ git push origin main --tags
 - Gemini (Web / the main gemini.google.com page)
 
 **Not currently supported**
-- Chrome's built-in "Gemini side panel" feature — this is a native Chrome browser
-  feature rather than a regular web page, so it works differently under the hood
-  and isn't supported at this time.
+- Enterlude works on the regular web page of each service (claude.ai / chatgpt.com /
+  gemini.google.com). Browser-specific side panels or built-in AI screens (e.g. Chrome's
+  "Gemini side panel" or Microsoft Edge's "Copilot") are native browser features that work
+  differently under the hood from a regular web page, so they are not supported.
 
 ## Limitations
 

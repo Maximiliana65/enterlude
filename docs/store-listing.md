@@ -44,7 +44,8 @@ AIチャット（Claude / ChatGPT / Gemini）で、Enterキーや送信ボタン
 
 ■ 対応サービス
 Claude(claude.ai) / ChatGPT(chatgpt.com) / Gemini(gemini.google.com)
-※ Chromeの「Geminiサイドパネル」機能には対応していません
+※ 対応対象は各サービスの通常のWebページです。ブラウザ独自のサイドパネルや組み込みAI画面
+（Chromeの「Geminiサイドパネル」、Microsoft Edgeの「Copilot」など）には対応していません
 
 ■ 料金について
 広告表示・有料機能・サブスクリプションは一切ありません。すべての機能を無料でご利用いただけます。

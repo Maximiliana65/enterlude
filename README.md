@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.2-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 **日本語** | [English](./README.en.md) | [한국어](./README.ko.md) | [繁體中文](./README.zh-TW.md)
 
@@ -109,8 +109,9 @@ git push origin main --tags
 - Gemini (Web / gemini.google.com のメイン画面)
 
 **現在非対応**
-- Chromeの「Geminiサイドパネル」機能（Chromeに内蔵されたブラウザ機能で、通常のWebページとは
-  仕組みが異なるため、現時点では対応していません）
+- 対応対象は、各サービスの通常のWebページ（claude.ai / chatgpt.com / gemini.google.com）です。
+  ブラウザ独自のサイドパネルや組み込みAI画面（例: Chromeの「Geminiサイドパネル」、Microsoft Edgeの
+  「Copilot」）は、通常のWebページとは仕組みが異なるブラウザのネイティブ機能のため、対応していません。
 
 ## Limitations（制限事項）
 

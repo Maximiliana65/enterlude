@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.2-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 한국어 | [日本語](./README.md) | [English](./README.en.md) | [繁體中文](./README.zh-TW.md)
 
@@ -105,9 +105,10 @@ git push origin main --tags
 - Gemini (웹 / gemini.google.com 메인 화면)
 
 **현재 미지원**
-- Chrome에 내장된 "Gemini 사이드 패널" 기능 — 일반적인 웹페이지가 아니라 Chrome
-  브라우저 자체의 네이티브 기능으로 보이며, 동작 방식이 근본적으로 다르기 때문에
-  현재는 지원하지 않습니다.
+- 지원 대상은 각 서비스의 일반 웹페이지(claude.ai / chatgpt.com / gemini.google.com)입니다.
+  브라우저 자체의 사이드 패널이나 내장 AI 화면(예: Chrome의 "Gemini 사이드 패널",
+  Microsoft Edge의 "Copilot")은 일반 웹페이지와 작동 방식이 근본적으로 다른 브라우저
+  네이티브 기능이기 때문에 지원하지 않습니다.
 
 ## 제한 사항
 
