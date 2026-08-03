@@ -68,7 +68,7 @@ core/       … shared lock logic, independent of any specific site
               (ChatGPT and Gemini only — see DEVLOG for why)
 adapters/   … per-site definitions of "where's the input box / send button"
 fun/        … the optional fun-comment feature (comments.ja.js / comments.en.js /
-              comments.ko.js, picked automatically based on the browser's UI language,
+              comments.ko.js / comments.zh-TW.js, picked automatically based on the browser's UI language,
               or overridden manually from the settings screen)
 popup/      … the settings screen opened from the toolbar icon
 _locales/   … UI strings for i18n (currently Japanese, English, Korean, and Traditional Chinese)
@@ -80,20 +80,21 @@ Adding support for another AI service is meant to be as simple as adding one new
 
 ## Versioning
 
-This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`) and tags each release in Git (e.g. `v0.5.3`).
+This project follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`). Future public releases are tagged on a tested release commit (for example, `v1.4.3`).
 
 <details>
-<summary>Maintainer notes: tagging releases</summary>
+<summary>Maintainer notes: safe release workflow</summary>
 
 - New backward-compatible feature → bump MINOR (e.g. `0.1.0` → `0.2.0`)
 - Bug fix only → bump PATCH (e.g. `0.2.0` → `0.2.1`)
 - Breaking change → bump MAJOR
-- Each release gets a Git tag
+- Work follows: working branch → required verification → pull request → review → squash merge → final browser verification on `main` → tag. Do not push directly to `main`
+- Tag only the verified release commit on `main`. Do not recreate missing historical tags by guessing
 
-To push tags to GitHub:
+Push only the tag for the release:
 
 ```
-git push origin main --tags
+git push origin v1.4.3
 ```
 
 </details>
