@@ -45,7 +45,7 @@ See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md
 - When you actually want to send, click the 🔒 badge in the corner (or press `Ctrl+Shift+U`) to unlock
   - The unlock is good for **exactly one send**, then it automatically re-locks
   - Press `Esc` to cancel the unlock without sending
-- Send and "Regenerate/Retry" buttons are protected the same way
+- Standard Send and "Regenerate/Retry" buttons are protected. When a service shows an additional-choice menu, explicitly selecting its final option can proceed
 - (Optional) A small, playful comment can appear after each send — off by default
 
 ## Installation (developer mode)
