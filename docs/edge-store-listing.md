@@ -31,25 +31,25 @@ Edgeの管理画面では、パッケージに含まれる各言語について�
 ### 日本語
 
 ```
-Enterludeは、Claude、ChatGPT、Geminiの通常のWebページで、書きかけのメッセージを誤って送信してしまう事故を減らすための拡張機能です。ロック中はEnterキーを送信ではなく改行として扱い、送信ボタンと再試行ボタンも保護します。送信したい時だけ右下の鍵バッジまたはCtrl+Shift+Uで一度だけロックを解除でき、送信後は自動で再ロックされます。Escで解除を取り消せます。広告・課金はありません。入力内容や会話内容を開発者へ送信・保存せず、誤送信防止に必要な範囲で入力欄の状態をブラウザ内で一時的に処理します。通常のWebページ以外の、ブラウザに組み込まれたAI画面（AIサイドパネルを含む）には対応していません。
+Enterludeは、Claude、ChatGPT、Geminiの通常のWebページで、書きかけのメッセージを誤って送信してしまう事故を減らすための拡張機能です。ロック中はEnterキーを送信ではなく改行として扱い、通常の送信ボタンと再試行ボタンも保護します。サービス側で追加選択が必要なメニューは、最終項目を明示して選ぶと実行できます。送信したい時だけ右下の鍵バッジまたはCtrl+Shift+Uで一度だけロックを解除でき、送信後は自動で再ロックされます。Escで解除を取り消せます。広告・課金はありません。入力内容や会話内容を開発者へ送信・保存せず、誤送信防止に必要な範囲で入力欄の状態をブラウザ内で一時的に処理します。通常のWebページ以外の、ブラウザに組み込まれたAI画面（AIサイドパネルを含む）には対応していません。
 ```
 
 ### English
 
 ```
-Enterlude helps prevent accidental sends of unfinished messages on the regular web pages of Claude, ChatGPT, and Gemini. While locked, Enter inserts a line break instead of sending, and Send and Retry buttons are protected too. When you are ready to send, unlock once with the lock badge or Ctrl+Shift+U; the extension automatically locks again after the next send. Press Esc to cancel an unlock. It is free and has no ads. Enterlude does not send or store your message or conversation content for the developer; it may temporarily process the page's input state locally as needed to prevent accidental sends. Browser-integrated AI surfaces, including AI side panels, are not supported.
+Enterlude helps prevent accidental sends of unfinished messages on the regular web pages of Claude, ChatGPT, and Gemini. While locked, Enter inserts a line break instead of sending, and standard Send and Retry buttons are protected too. When a service shows an additional-choice menu, explicitly selecting its final option can proceed. When you are ready to send, unlock once with the lock badge or Ctrl+Shift+U; the extension automatically locks again after the next send. Press Esc to cancel an unlock. It is free and has no ads. Enterlude does not send or store your message or conversation content for the developer; it may temporarily process the page's input state locally as needed to prevent accidental sends. Browser-integrated AI surfaces, including AI side panels, are not supported.
 ```
 
 ### 한국어
 
 ```
-Enterlude는 Claude, ChatGPT, Gemini의 일반 웹페이지에서 작성 중인 메시지가 실수로 전송되는 일을 줄이기 위한 확장 프로그램입니다. 잠금 상태에서는 Enter 키가 전송되지 않고 줄바꿈만 입력되며, 전송 및 다시 시도 버튼도 보호됩니다. 실제로 보낼 때만 오른쪽 아래의 자물쇠 배지 또는 Ctrl+Shift+U로 한 번 잠금을 해제할 수 있고, 전송 후에는 자동으로 다시 잠깁니다. Esc로 해제를 취소할 수 있습니다. 광고·유료 기능은 없습니다. 메시지나 대화 내용을 개발자에게 전송하거나 저장하지 않으며, 오발송 방지에 필요한 범위에서만 페이지 입력창의 상태를 브라우저 안에서 일시적으로 처리할 수 있습니다. 일반 웹페이지가 아닌, 브라우저에 내장된 AI 화면(AI 사이드 패널 포함)은 지원하지 않습니다.
+Enterlude는 Claude, ChatGPT, Gemini의 일반 웹페이지에서 작성 중인 메시지가 실수로 전송되는 일을 줄이기 위한 확장 프로그램입니다. 잠금 상태에서는 Enter 키가 전송되지 않고 줄바꿈만 입력되며, 일반 전송 및 다시 시도 버튼도 보호됩니다. 서비스에서 추가 선택이 필요한 메뉴는 마지막 항목을 명시적으로 선택하면 실행할 수 있습니다. 실제로 보낼 때만 오른쪽 아래의 자물쇠 배지 또는 Ctrl+Shift+U로 한 번 잠금을 해제할 수 있고, 전송 후에는 자동으로 다시 잠깁니다. Esc로 해제를 취소할 수 있습니다. 광고·유료 기능은 없습니다. 메시지나 대화 내용을 개발자에게 전송하거나 저장하지 않으며, 오발송 방지에 필요한 범위에서만 페이지 입력창의 상태를 브라우저 안에서 일시적으로 처리할 수 있습니다. 일반 웹페이지가 아닌, 브라우저에 내장된 AI 화면(AI 사이드 패널 포함)은 지원하지 않습니다.
 ```
 
 ### 繁體中文
 
 ```
-Enterlude 是一款用於減少 Claude、ChatGPT 與 Gemini 一般網頁中誤傳未完成訊息的擴充功能。鎖定時，按 Enter 只會換行，不會傳送；傳送與重新嘗試按鈕也會受到保護。真正要傳送時，可點選右下角的鎖頭徽章或按 Ctrl+Shift+U，暫時解鎖一次；傳送後會自動重新上鎖。按 Esc 可取消解鎖。本擴充功能免費且沒有廣告。不會將訊息或對話內容傳送給開發者或加以保存；為防止誤傳，可能只在瀏覽器內暫時處理網頁輸入欄的狀態。目前不支援一般網頁以外的瀏覽器內建 AI 畫面（包括 AI 側邊欄）。
+Enterlude 是一款用於減少 Claude、ChatGPT 與 Gemini 一般網頁中誤傳未完成訊息的擴充功能。鎖定時，按 Enter 只會換行，不會傳送；一般傳送與重新嘗試按鈕也會受到保護。若服務顯示需要額外選擇的選單，明確選取最終項目即可執行。真正要傳送時，可點選右下角的鎖頭徽章或按 Ctrl+Shift+U，暫時解鎖一次；傳送後會自動重新上鎖。按 Esc 可取消解鎖。本擴充功能免費且沒有廣告。不會將訊息或對話內容傳送給開發者或加以保存；為防止誤傳，可能只在瀏覽器內暫時處理網頁輸入欄的狀態。目前不支援一般網頁以外的瀏覽器內建 AI 畫面（包括 AI 側邊欄）。
 ```
 
 ## 申請時の確認事項
