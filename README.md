@@ -70,7 +70,8 @@ core/       … 送信ロックの共通ロジック（サイトに依存しな�
             … *-page-guard.js は、サイト本体と同じ実行空間(MAIN world)で
               動く専用ガード(ChatGPT・Geminiのみ。詳細はDEVLOG参照)
 adapters/   … サイトごとの「入力欄・送信ボタンの場所」の定義
-fun/        … お楽しみ機能（一言コメントなど。comments.ja.js / comments.en.js / comments.ko.jsを
+fun/        … お楽しみ機能（一言コメントなど。comments.ja.js / comments.en.js / comments.ko.js /
+              comments.zh-TW.jsを
               ブラウザの表示言語に応じて自動的に切り替え。設定画面から手動指定も可能）
 popup/      … 拡張機能アイコンから開く設定画面
 _locales/   … 多言語対応のための表示文言（現在: 日本語・英語・韓国語・繁体字中国語）
@@ -83,20 +84,21 @@ docs/       … 設計資料・スクリーンショット・ブランド用ロ�
 
 ## バージョン管理について
 
-このプロジェクトは [セマンティックバージョニング](https://semver.org/lang/ja/)（`MAJOR.MINOR.PATCH`）でバージョンを管理しています。リリースごとにGitのタグ（例: `v0.5.3`）も付与しています。
+このプロジェクトは [セマンティックバージョニング](https://semver.org/lang/ja/)（`MAJOR.MINOR.PATCH`）でバージョンを管理しています。今後の正式公開では、動作確認済みの公開コミットにGitタグ（例: `v1.4.3`）を付与します。
 
 <details>
-<summary>開発者向けメモ: タグの運用方法</summary>
+<summary>メンテナー向けメモ: 安全なリリース手順</summary>
 
 - 新機能を追加したら MINOR を上げる（例: `0.1.0` → `0.2.0`）
 - バグ修正だけなら PATCH を上げる（例: `0.2.0` → `0.2.1`）
 - 使い方が変わるような大きな変更をしたら MAJOR を上げる
-- タグは各リリース時に付与しています
+- 作業は `main` から作業ブランチを作り、必要な動作確認をしてからPull Requestを作成します。内容を確認してSquash mergeし、`main`上でも最終実機確認を行います。`main`へ直接pushはしません
+- 公開する`main`の確認済みコミットにだけタグを付けます。過去の不足タグを推測で追加しません
 
-GitHubにタグを反映するには、通常のコミットに加えて以下を実行します。
+GitHubにタグを反映するには、対象のタグだけをpushします。
 
 ```
-git push origin main --tags
+git push origin v1.4.3
 ```
 
 </details>

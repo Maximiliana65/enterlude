@@ -67,7 +67,8 @@ core/       … 사이트에 의존하지 않는 공통 잠금 로직
             … *-page-guard.js 파일은 페이지 본체와 같은 MAIN world에서 실행됨
               (ChatGPT・Gemini 전용, 자세한 이유는 DEVLOG 참고)
 adapters/   … 사이트별 "입력창・전송 버튼 위치" 정의
-fun/        … 선택적인 재미 코멘트 기능 (comments.ja.js / comments.en.js / comments.ko.js를
+fun/        … 선택적인 재미 코멘트 기능 (comments.ja.js / comments.en.js / comments.ko.js /
+              comments.zh-TW.js를
               브라우저 표시 언어에 따라 자동으로 선택. 설정 화면에서 수동 지정도 가능)
 popup/      … 툴바 아이콘에서 여는 설정 화면
 _locales/   … 다국어 지원용 UI 문구 (현재 일본어・영어・한국어・번체 중국어)
@@ -79,20 +80,21 @@ docs/       … 설계 자료, 스크린샷, 브랜드 에셋
 
 ## 버전 관리
 
-이 프로젝트는 [시맨틱 버저닝](https://semver.org/)(`MAJOR.MINOR.PATCH`)을 따르며, 릴리스마다 Git 태그(예: `v0.7.0`)를 붙입니다.
+이 프로젝트는 [시맨틱 버저닝](https://semver.org/)(`MAJOR.MINOR.PATCH`)을 따릅니다. 앞으로의 정식 공개판에는 동작 확인을 마친 공개 커밋에 Git 태그(예: `v1.4.3`)를 붙입니다.
 
 <details>
-<summary>유지보수자용 메모: 태그 운영 방법</summary>
+<summary>유지보수자용 메모: 안전한 릴리스 절차</summary>
 
 - 하위 호환되는 새 기능 추가 → MINOR 증가 (예: `0.1.0` → `0.2.0`)
 - 버그 수정만 있는 경우 → PATCH 증가 (예: `0.2.0` → `0.2.1`)
 - 사용 방식이 바뀌는 큰 변경 → MAJOR 증가
-- 각 릴리스마다 Git 태그를 붙임
+- 작업 브랜치 → 필요한 동작 확인 → Pull Request → 내용 확인 → Squash merge → `main`에서의 최종 실제 브라우저 확인 → 태그 순으로 진행합니다. `main`에 직접 push하지 않습니다
+- 실제로 공개할 `main`의 확인된 커밋에만 태그를 붙이며, 누락된 과거 태그를 추측으로 추가하지 않습니다
 
-GitHub에 태그를 반영하려면:
+GitHub에는 공개 대상 태그만 push합니다:
 
 ```
-git push origin main --tags
+git push origin v1.4.3
 ```
 
 </details>

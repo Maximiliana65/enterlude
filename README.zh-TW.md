@@ -80,20 +80,21 @@ docs/       … 設計文件、截圖、品牌素材
 
 ## 版本管理
 
-本專案採用[語意化版本](https://semver.org/)（`MAJOR.MINOR.PATCH`），每次發布都會在 Git 上加上標籤（例如 `v1.2.3`）。
+本專案採用[語意化版本](https://semver.org/)（`MAJOR.MINOR.PATCH`）。未來正式發布時，會在完成動作確認的發布提交上加上 Git 標籤（例如 `v1.4.3`）。
 
 <details>
-<summary>維護者備忘：如何標記版本</summary>
+<summary>維護者備忘：安全的發布流程</summary>
 
 - 新增向下相容的功能 → 提升 MINOR（例如 `0.1.0` → `0.2.0`）
 - 僅修正錯誤 → 提升 PATCH（例如 `0.2.0` → `0.2.1`）
 - 重大變更 → 提升 MAJOR
-- 每次發布都會加上 Git 標籤
+- 依照「工作分支 → 必要的動作確認 → Pull Request → 內容確認 → Squash merge → 在 `main` 上進行最終瀏覽器驗證 → 標籤」的順序進行。不要直接推送到 `main`
+- 只在已確認要公開的 `main` 提交上加上標籤，不要以猜測方式補建過去缺少的標籤
 
-將標籤推送到 GitHub：
+只將本次發布的標籤推送到 GitHub：
 
 ```
-git push origin main --tags
+git push origin v1.4.3
 ```
 
 </details>
