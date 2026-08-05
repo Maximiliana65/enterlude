@@ -1,6 +1,6 @@
 # Microsoft Edge Add-ons 掲載情報（次回申請用ドラフト）
 
-> 状態: 未申請。最終更新: 2026-08-03
+> 状態: 未申請。最終更新: 2026-08-05
 >
 > この文書は、Edge Add-onsへの初回申請時に使う掲載情報の下書きです。実際に入力する前に、Partner Centerの設問・プライバシーポリシー・固定した公開ZIPを照合してください。
 
@@ -17,12 +17,12 @@ Edgeの管理画面では、パッケージに含まれる各言語について�
 
 | 言語 | 拡張機能のロケール | 表示名 | 使用するロゴ | プライバシーページ |
 |---|---|---|---|---|
-| 日本語 | `ja` | Enterlude - AI誤送信防止 | `icons/icon128.png` | `privacy.html` |
-| English | `en` | Enterlude - Prevent Accidental AI Chat Sends | `icons/icon128.png` | `privacy.en.html` |
-| 한국어 | `ko` | Enterlude - AI 채팅 오발송 방지 | `icons/icon128.png` | `privacy.ko.html` |
-| 繁體中文 | `zh_TW` | Enterlude - 防止 AI 聊天誤傳訊息 | `icons/icon128.png` | `privacy.zh-TW.html` |
+| 日本語 | `ja` | Enterlude - AI誤送信防止 | `docs/images/logo-300.png` | `privacy.html` |
+| English | `en` | Enterlude - Prevent Accidental AI Chat Sends | `docs/images/logo-300.png` | `privacy.en.html` |
+| 한국어 | `ko` | Enterlude - AI 채팅 오발송 방지 | `docs/images/logo-300.png` | `privacy.ko.html` |
+| 繁體中文 | `zh_TW` | Enterlude - 防止 AI 聊天誤傳訊息 | `docs/images/logo-300.png` | `privacy.zh-TW.html` |
 
-現在のロゴは128×128pxです。提出画面で最低サイズを満たすことを確認し、より大きなロゴが必要になった場合は別途作成します。既存ロゴの見た目を整える目的だけでは変更しません。
+提出用ロゴは`docs/images/logo-300.png`（300×300px）を4言語共通で使用します。これは既存の紹介画像で使っているシアンのEnterludeブランドマークです。拡張機能内の鍵アイコン（`icons/icon16.png` / `icon48.png` / `icon128.png`）は変更しません。
 
 ## 言語ごとの詳細説明
 
