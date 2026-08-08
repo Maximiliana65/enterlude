@@ -19,7 +19,8 @@ AIチャット(Claude / ChatGPT / Gemini)で、うっかりEnterキーや送信�
 
 ## 現在のステータス
 
-✅ 公開済み — [GitHubで公開中](https://github.com/Maximiliana65/enterlude)
+✅ [Chrome ウェブストアで公開中（v1.4.3、2026-08-07更新）](https://chromewebstore.google.com/detail/enterlude-ai%E8%AA%A4%E9%80%81%E4%BF%A1%E9%98%B2%E6%AD%A2/efefkammkfpoccefhmeeifidffackpkm)
+— [ソースコードはGitHubで公開中](https://github.com/Maximiliana65/enterlude)
 
 **対応サービス**
 - Claude
@@ -44,7 +45,7 @@ AIチャット(Claude / ChatGPT / Gemini)で、うっかりEnterキーや送信�
 
 ![使い方の流れ](./docs/images/how-it-works.svg)
 
-- **Enterキーは常に改行だけ**になり、誤ってメッセージが送信されることがありません
+- ロック中は**Enterキーでは送信されず、改行のみになります**
 - 送信したい時だけ、右下の🔒アイコンをクリック（またはショートカット `Ctrl+Shift+U`）でロックを解除
   - 解除は**次の1回だけ**有効。送信すると自動的にまたロックがかかります
   - `Esc` キーでロック解除をキャンセルできます

@@ -18,7 +18,8 @@ A Chrome/Edge extension that prevents accidental sends in AI chats (Claude / Cha
 
 ## Status
 
-✅ Published — [live on GitHub](https://github.com/Maximiliana65/enterlude)
+✅ [Available on the Chrome Web Store (v1.4.3, updated August 7, 2026)](https://chromewebstore.google.com/detail/enterlude-ai%E8%AA%A4%E9%80%81%E4%BF%A1%E9%98%B2%E6%AD%A2/efefkammkfpoccefhmeeifidffackpkm)
+— [source code available on GitHub](https://github.com/Maximiliana65/enterlude)
 
 **Supported services**
 - Claude
@@ -41,7 +42,7 @@ See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md
 
 ![How it works](./docs/images/how-it-works.en.svg)
 
-- **Enter always inserts a line break** — your message is never sent by accident
+- While locked, **Enter inserts a line break instead of sending your message**
 - When you actually want to send, click the 🔒 badge in the corner (or press `Ctrl+Shift+U`) to unlock
   - The unlock is good for **exactly one send**, then it automatically re-locks
   - Press `Esc` to cancel the unlock without sending
