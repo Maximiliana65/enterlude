@@ -1,9 +1,10 @@
 # ROADMAP
 
-**現在地**: フェーズ1〜4の初期実装は完了し、現在はv1.4.3の公開準備中です。[GitHubで公開中](https://github.com/Maximiliana65/enterlude)です。
+**現在地**: フェーズ1〜4の初期実装と、v1.4.3のChrome Web Store公開が完了しています。[Chrome ウェブストアで公開中](https://chromewebstore.google.com/detail/enterlude-ai%E8%AA%A4%E9%80%81%E4%BF%A1%E9%98%B2%E6%AD%A2/efefkammkfpoccefhmeeifidffackpkm)です。
 ✅ **「Enterlude」への改名完了**（v1.0.0。GitHubリポジトリ名も`enterlude`に変更済み）。
 ✅ **Chrome Web Storeの審査通過**（2026-07-29、Enterlude名義でv1.0.1を公開）。
-残っているのは、v1.4.3の公開前実機確認、Chrome Web Store更新、Edge Add-onsへの初回申請です。
+✅ **Chrome Web Storeをv1.4.3へ更新・公開**（2026-08-07、審査通過後に自動公開）。
+Edge Add-onsへの初回申請は、公開者登録時の本人確認要件により保留しています。
 
 ## 配信状況（リポジトリ記録）
 
@@ -11,9 +12,9 @@ GitHub上の版とストアの公開版は別に管理します。ストアの�
 
 | 場所 | バージョン | 状態 |
 |---|---|---|
-| GitHub (main) | v1.4.3（繁体字中国語対応、対応範囲の文書化まで反映） | 次回ストア公開の出発点。公開前の実機確認・タグ作成は未実施 |
-| Chrome Web Store | v1.0.1 | リポジトリ記録では**審査通過・公開中**（2026-07-29）。v1.4.3の更新準備中 |
-| Edge Add-ons | 未申請 | 4言語の掲載情報、Privacy申告、実機確認後に初回申請予定 |
+| GitHub (main) | v1.4.3 + 公開後の文書・GitHub Pages更新 | `v1.4.3`タグからChrome Web Storeへ提出したコードは固定済み。公開後の文書・ホームページ更新は別コミットで管理 |
+| Chrome Web Store | v1.4.3 | **審査通過・公開中**（2026-08-07、4言語） |
+| Edge Add-ons | 未申請 | 拡張機能の実機確認は完了。公開者登録の本人確認要件により初回申請は保留 |
 
 ## フェーズ1: Claude.aiで動くコア機能
 - [x] 全体設計（コア / サイトアダプター / お楽しみプラグインの3層構造）
@@ -48,8 +49,8 @@ GitHub上の版とストアの公開版は別に管理します。ストアの�
       コミット履歴・v0.1.0〜v0.5.3のタグも含めて反映済み）
 - [x] `_locales/en` の内容を最終チェック（英語表示で確認済み）
 - [x] **Microsoft Edgeでの動作確認**（Chrome/Edge、通常・シークレット両モード、3サイトとも確認済み）
-  - ※これは過去の確認記録です。v1.4.3公開前の再確認は、[公開前チェックリスト](./docs/release-checklist.md)に従って未実施です。
-- [ ] Edge Add-onsへの初回申請（公開準備中）
+  - v1.4.3の公開前に、Chrome/Edgeの通常・プライベートモードで再確認を実施済み。結果は[公開前チェックリストの公開結果](./docs/release-checklist.md)とDEVLOGに記録
+- [ ] Edge Add-onsへの初回申請（公開者登録の本人確認要件により保留）
 
 ## 将来的な検討事項（未定）
 - ~~Grok・Meta AIなど、他のAIサービスへの対応~~ → 3サイト対応で十分と判断し見送り

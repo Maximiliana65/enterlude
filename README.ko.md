@@ -18,7 +18,8 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 
 ## 현재 상태
 
-✅ 공개됨 — [GitHub에서 공개 중](https://github.com/Maximiliana65/enterlude)
+✅ [Chrome 웹 스토어에서 공개 중(v1.4.3, 2026년 8월 7일 업데이트)](https://chromewebstore.google.com/detail/enterlude-ai%E8%AA%A4%E9%80%81%E4%BF%A1%E9%98%B2%E6%AD%A2/efefkammkfpoccefhmeeifidffackpkm)
+— [소스 코드는 GitHub에서 공개 중](https://github.com/Maximiliana65/enterlude)
 
 **지원 서비스**
 - Claude
@@ -41,7 +42,7 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 
 ![작동 방식](./docs/images/how-it-works.ko.svg)
 
-- **Enter 키는 항상 줄바꿈**으로 동작하여, 실수로 메시지가 전송되지 않습니다
+- 잠금 중에는 **Enter 키를 눌러도 전송되지 않고 줄바꿈만 됩니다**
 - 실제로 전송하고 싶을 때만, 모서리의 🔒 배지를 클릭하거나 `Ctrl+Shift+U`를 눌러 잠금을 해제합니다
   - 잠금 해제는 **정확히 1회 전송**에만 유효하며, 이후 자동으로 다시 잠깁니다
   - `Esc` 키를 누르면 전송하지 않고 잠금 해제를 취소할 수 있습니다

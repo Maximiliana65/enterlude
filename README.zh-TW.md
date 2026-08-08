@@ -18,7 +18,8 @@ Enterlude 是一款 Chrome/Edge 擴充功能，可防止您在 AI 聊天（Claud
 
 ## 目前狀態
 
-✅ 已發布 — [GitHub 上線中](https://github.com/Maximiliana65/enterlude)
+✅ [已在 Chrome 線上應用程式商店發布（v1.4.3，2026年8月7日更新）](https://chromewebstore.google.com/detail/enterlude-ai%E8%AA%A4%E9%80%81%E4%BF%A1%E9%98%B2%E6%AD%A2/efefkammkfpoccefhmeeifidffackpkm)
+— [原始碼已在 GitHub 公開](https://github.com/Maximiliana65/enterlude)
 
 **支援服務**
 - Claude
@@ -41,7 +42,7 @@ Enterlude 是一款 Chrome/Edge 擴充功能，可防止您在 AI 聊天（Claud
 
 ![運作方式](./docs/images/how-it-works.zh-TW.svg)
 
-- **Enter 鍵永遠只會換行** — 訊息不會被意外送出
+- 鎖定時按 **Enter 鍵不會傳送訊息，只會換行**
 - 想要傳送時，只要點擊角落的 🔒 徽章（或按下 `Ctrl+Shift+U`）即可解鎖
   - 解鎖後**僅能傳送一次**，之後會自動重新鎖定
   - 按下 `Esc` 可以取消解鎖、不進行傳送
