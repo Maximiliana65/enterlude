@@ -49,6 +49,8 @@ See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md
 - Standard Send and "Regenerate/Retry" buttons are protected. When a service shows an additional-choice menu, explicitly selecting its final option can proceed
 - (Optional) A small, playful comment can appear after each send — off by default
 
+To open the settings, click the browser toolbar's Extensions (puzzle-piece) icon and select Enterlude. You can turn playful comments on or off and choose their language in the settings.
+
 ## Installation (developer mode)
 
 **Chrome**
