@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.4-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 한국어 | [日本語](./README.md) | [English](./README.en.md) | [繁體中文](./README.zh-TW.md)
 
@@ -73,7 +73,7 @@ fun/        … 선택적인 재미 코멘트 기능 (comments.ja.js / comments.
               브라우저 표시 언어에 따라 자동으로 선택. 설정 화면에서 수동 지정도 가능)
 popup/      … 툴바 아이콘에서 여는 설정 화면
 _locales/   … 다국어 지원용 UI 문구 (현재 일본어・영어・한국어・번체 중국어)
-icons/      … 툴바 아이콘 (작은 크기에서도 잘 보이도록 단순한 자물쇠 모양 채택)
+icons/      … 툴바 아이콘 (작은 크기에서도 잘 보이도록 만든 Enterlude의 틸 색상 브랜드 마크)
 docs/       … 설계 자료, 스크린샷, 브랜드 에셋
 ```
 
