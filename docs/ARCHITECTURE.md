@@ -111,11 +111,13 @@ MAIN worldと拡張機能側はJavaScriptの変数を直接共有できません
 
 ```mermaid
 stateDiagram-v2
-  [*] --> ロック中
-  ロック中 --> 一時解除中: バッジクリック / Ctrl+Shift+U
-  一時解除中 --> ロック中: Esc / バッジ再クリック
-  一時解除中 --> ロック中: 保護対象の操作を通過（時点はサイトごと）
-  ロック中 --> ロック中: Enterは改行、保護対象のボタンは遮断
+  direction LR
+  state "ロック中" as Locked
+  state "一時解除中" as Unlocked
+
+  [*] --> Locked
+  Locked --> Unlocked: 解除
+  Unlocked --> Locked: 再ロック
 ```
 
 | 状態 | 操作 | 結果 |
