@@ -36,7 +36,7 @@ A Chrome/Edge extension that prevents accidental sends in AI chats (Claude / Cha
 
 Other OSes and environments have not been tested by the developer.
 
-See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md) for release history, [DEVLOG.md](./DEVLOG.md) for the development journal, [docs/DESIGN.md](./docs/DESIGN.md) for the original design notes, and [docs/privacy.en.md](./docs/privacy.en.md) for the privacy policy.
+See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md) for release history, [DEVLOG.md](./DEVLOG.md) for the development journal, [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for the current architecture and maintenance guide (Japanese), [docs/DESIGN.md](./docs/DESIGN.md) for the original design notes, and [docs/privacy.en.md](./docs/privacy.en.md) for the privacy policy.
 
 ## What it does
 
@@ -46,7 +46,7 @@ See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md
 - When you actually want to send, click the 🔒 badge in the corner (or press `Ctrl+Shift+U`) to unlock
   - The unlock is good for **exactly one send**, then it automatically re-locks
   - Press `Esc` to cancel the unlock without sending
-- Standard Send and "Regenerate/Retry" buttons are protected. When a service shows an additional-choice menu, explicitly selecting its final option can proceed
+- Send and "Regenerate/Retry" buttons that Enterlude recognizes as protected on supported services are protected. When a service shows an additional-choice menu, explicitly selecting its final option can proceed
 - (Optional) A small, playful comment can appear after each send — off by default
 
 ## Installation (developer mode)
@@ -77,7 +77,7 @@ icons/      … toolbar icon (a simple lock, chosen for legibility at small size
 docs/       … design notes, screenshots, brand assets
 ```
 
-Adding support for another AI service is meant to be as simple as adding one new file under `adapters/` and adding the site to `manifest.json`.
+To add support for another AI service, first add a site-specific file under `adapters/` and register the site in `manifest.json`. If the site's event handling competes with the extension, it may also need dedicated selectors and a MAIN-world guard. See the [architecture guide](./docs/ARCHITECTURE.md) (Japanese) for details.
 
 ## Versioning
 
