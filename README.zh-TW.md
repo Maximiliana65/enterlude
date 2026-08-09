@@ -36,7 +36,7 @@ Enterlude 是一款 Chrome/Edge 擴充功能，可防止您在 AI 聊天（Claud
 
 ※上述以外的OS・環境，開發者尚未進行測試確認。
 
-規劃內容請參考 [ROADMAP.md](./ROADMAP.md)，變更紀錄請參考 [CHANGELOG.md](./CHANGELOG.md)，開發過程請參考 [DEVLOG.md](./DEVLOG.md)，原始設計文件請參考 [docs/DESIGN.md](./docs/DESIGN.md)，隱私權政策請參考 [docs/privacy.zh-TW.md](./docs/privacy.zh-TW.md)。
+規劃內容請參考 [ROADMAP.md](./ROADMAP.md)，變更紀錄請參考 [CHANGELOG.md](./CHANGELOG.md)，開發過程請參考 [DEVLOG.md](./DEVLOG.md)，目前的實作與維護方針請參考 [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)（日文），初期設計紀錄請參考 [docs/DESIGN.md](./docs/DESIGN.md)，隱私權政策請參考 [docs/privacy.zh-TW.md](./docs/privacy.zh-TW.md)。
 
 ## 功能
 
@@ -46,7 +46,7 @@ Enterlude 是一款 Chrome/Edge 擴充功能，可防止您在 AI 聊天（Claud
 - 想要傳送時，只要點擊角落的 🔒 徽章（或按下 `Ctrl+Shift+U`）即可解鎖
   - 解鎖後**僅能傳送一次**，之後會自動重新鎖定
   - 按下 `Esc` 可以取消解鎖、不進行傳送
-- 一般的傳送鈕與「重新產生／重試」鈕的誤觸會受到保護。若服務顯示需要額外選擇的選單，明確選取最終項目即可執行
+- 在支援服務中，Enterlude辨識為保護對象的傳送鈕與「重新產生／重試」鈕可避免誤觸。若服務顯示需要額外選擇的選單，明確選取最終項目即可執行
 - （選用）每次傳送後，可以顯示一句俏皮的小提示 — 預設關閉
 
 ## 安裝方式（開發者模式）
@@ -77,7 +77,7 @@ icons/      … 工具列圖示（簡單的鎖頭造型，在小尺寸下依然�
 docs/       … 設計文件、截圖、品牌素材
 ```
 
-要支援其他AI服務，只需要在 `adapters/` 新增一個檔案，並在 `manifest.json` 中加入該網站即可。
+若要支援其他AI服務，請先在 `adapters/` 新增該網站的檔案，並在 `manifest.json` 中註冊該網站。若與網站本身的事件處理發生競爭，可能還需要專用選擇器與MAIN world防護程式。詳情請參考[架構說明](./docs/ARCHITECTURE.md)（日文）。
 
 ## 版本管理
 

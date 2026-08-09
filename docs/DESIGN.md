@@ -6,7 +6,8 @@
 > **注記**: この文書は初期設計（2026年7月16日時点）を記録したものです。
 > 「まずはClaudeのみ対応」「将来追加」といった記述は設計当時の想定であり、
 > 実際にはChatGPT・Geminiへの対応やお楽しみ機能なども実装済みです。
-> 現在の実装状況との差分については [DEVLOG.md](../DEVLOG.md) と
+> 現在の実装と保守方針は [ARCHITECTURE.md](./ARCHITECTURE.md) を、
+> 設計当時からの差分と経緯は [DEVLOG.md](../DEVLOG.md) と
 > [CHANGELOG.md](../CHANGELOG.md) を参照してください。
 
 ---

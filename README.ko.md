@@ -36,7 +36,7 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 
 ※위 환경 이외에서는 개발자가 직접 동작을 확인하지 않았습니다.
 
-향후 계획은 [ROADMAP.md](./ROADMAP.md), 변경 이력은 [CHANGELOG.md](./CHANGELOG.md), 개발 과정은 [DEVLOG.md](./DEVLOG.md), 초기 설계 내용은 [docs/DESIGN.md](./docs/DESIGN.md), 개인정보처리방침은 [docs/privacy.ko.md](./docs/privacy.ko.md)를 참고해 주세요.
+향후 계획은 [ROADMAP.md](./ROADMAP.md), 변경 이력은 [CHANGELOG.md](./CHANGELOG.md), 개발 과정은 [DEVLOG.md](./DEVLOG.md), 현재 구현과 유지보수 방침은 [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)(일본어), 초기 설계 기록은 [docs/DESIGN.md](./docs/DESIGN.md), 개인정보처리방침은 [docs/privacy.ko.md](./docs/privacy.ko.md)를 참고해 주세요.
 
 ## 기능
 
@@ -46,7 +46,7 @@ AI 채팅(Claude / ChatGPT / Gemini)에서 실수로 Enter나 전송 버튼을 �
 - 실제로 전송하고 싶을 때만, 모서리의 🔒 배지를 클릭하거나 `Ctrl+Shift+U`를 눌러 잠금을 해제합니다
   - 잠금 해제는 **정확히 1회 전송**에만 유효하며, 이후 자동으로 다시 잠깁니다
   - `Esc` 키를 누르면 전송하지 않고 잠금 해제를 취소할 수 있습니다
-- 일반 전송 버튼과 "다시 생성/재시도" 버튼의 오클릭을 차단합니다. 서비스에서 추가 선택 메뉴를 표시하는 경우, 마지막 항목을 명시적으로 선택하면 실행할 수 있습니다
+- 지원 서비스에서 Enterlude가 보호 대상으로 인식한 전송 버튼과 "다시 생성/재시도" 버튼의 오클릭을 차단합니다. 서비스에서 추가 선택 메뉴를 표시하는 경우, 마지막 항목을 명시적으로 선택하면 실행할 수 있습니다
 - (선택 사항) 전송 후 짧은 코멘트가 표시되는 재미 기능도 있습니다 (기본값은 꺼짐)
 
 ## 설치 방법 (개발자 모드)
@@ -77,7 +77,7 @@ icons/      … 툴바 아이콘 (작은 크기에서도 잘 보이도록 단순
 docs/       … 설계 자료, 스크린샷, 브랜드 에셋
 ```
 
-다른 AI 서비스를 지원하려면 `adapters/`에 새 파일 하나를 추가하고 `manifest.json`에 사이트를 등록하는 것만으로 충분하도록 설계되어 있습니다.
+다른 AI 서비스를 지원할 때는 먼저 `adapters/`에 사이트용 파일을 추가하고 `manifest.json`에 해당 사이트를 등록합니다. 사이트의 이벤트 처리와 경쟁하는 경우에는 전용 선택자와 MAIN world 가드도 필요할 수 있습니다. 자세한 내용은 [아키텍처 안내서](./docs/ARCHITECTURE.md)(일본어)를 참고하세요.
 
 ## 버전 관리
 
