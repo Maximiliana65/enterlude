@@ -80,6 +80,14 @@ https://github.com/Maximiliana65/enterlude
 https://maximiliana65.github.io/enterlude/privacy.html
 ```
 
+## 次回更新用の掲載画像
+
+次回のChrome Web Store更新では、以下のティール色の素材を使用候補とします。ストア管理画面が求めるサイズ・形式は、アップロード直前にあらためて確認してください。
+
+- 小プロモーションタイル: `docs/images/store-promo-440x280.png`（440×280px）
+- マーキープロモーションタイル: `docs/images/store-marquee-1400x560.png`（1400×560px）
+- ストアロゴ: Chrome Web Store管理画面で現在使用しているロゴを、実際の画面で確認する。リポジトリの`docs/images/logo.png`および`docs/images/logo-300.png`はGitHub Pages・資料用であり、ストアロゴのサイズ要件を代用して判断しない
+
 ## 次回申請時に確認するPrivacy項目
 
 ストア管理画面の実際の質問と選択肢を開き、次の事実に沿って申告してください。前回の選択をそのまま再利用しないでください。

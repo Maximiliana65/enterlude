@@ -4,7 +4,7 @@
 
 # Enterlude
 
-![version](https://img.shields.io/badge/version-1.4.3-blue) ![license](https://img.shields.io/badge/license-MIT-green)
+![version](https://img.shields.io/badge/version-1.4.4-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
 繁體中文 | [日本語](./README.md) | [English](./README.en.md) | [한국어](./README.ko.md)
 
@@ -73,7 +73,7 @@ fun/        … 選用的趣味留言功能（comments.ja.js / comments.en.js /
               也可以在設定畫面手動指定）
 popup/      … 從工具列圖示開啟的設定畫面
 _locales/   … 多語系UI文字（目前有日文、英文、韓文、繁體中文）
-icons/      … 工具列圖示（簡單的鎖頭造型，在小尺寸下依然清晰）
+icons/      … 工具列圖示（適合小尺寸顯示的 Enterlude 青綠色品牌標誌）
 docs/       … 設計文件、截圖、品牌素材
 ```
 

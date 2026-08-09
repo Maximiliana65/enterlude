@@ -22,7 +22,7 @@ Edgeの管理画面では、パッケージに含まれる各言語について�
 | 한국어 | `ko` | Enterlude - AI 채팅 오발송 방지 | `docs/images/logo-300.png` | `privacy.ko.html` |
 | 繁體中文 | `zh_TW` | Enterlude - 防止 AI 聊天誤傳訊息 | `docs/images/logo-300.png` | `privacy.zh-TW.html` |
 
-提出用ロゴは`docs/images/logo-300.png`（300×300px）を4言語共通で使用します。これは既存の紹介画像で使っているシアンのEnterludeブランドマークです。拡張機能内の鍵アイコン（`icons/icon16.png` / `icon48.png` / `icon128.png`）は変更しません。
+提出用ロゴは`docs/images/logo-300.png`（300×300px）を4言語共通で使用します。これはティール色のEnterludeブランドマークです。拡張機能内のアイコン（`icons/icon16.png` / `icon48.png` / `icon128.png`）も同じブランドマークにそろえています。
 
 ## 言語ごとの詳細説明
 
