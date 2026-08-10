@@ -84,6 +84,36 @@
     }));
   }
 
+  // ChatGPT公式の設定でEnterが改行になっている場合、解除中のEnterを
+  // 通しただけでは送信が成立しない。入力欄が実際に空になった場合だけ
+  // 送信成立として再ロックし、コメント通知を発行する。
+  function relockAfterActualSend(composer) {
+    if (!composer.textContent.trim()) return;
+
+    const observer = new MutationObserver(() => {
+      const currentComposer = document.querySelector(COMPOSER_SELECTOR);
+      const wasCleared = currentComposer && !currentComposer.textContent.trim();
+
+      if (wasCleared) {
+        observer.disconnect();
+        if (isUnlocked()) {
+          relock();
+          publish('enterlude:sent');
+        }
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+
+    // 送信が成立しなかった場合は解除状態を維持し、Escなどで
+    // 利用者が通常どおり取り消せるようにする。
+    setTimeout(() => observer.disconnect(), 5000);
+  }
+
   window.addEventListener('keydown', (event) => {
     if (event.isComposing || event.keyCode === 229) return;
 
@@ -105,8 +135,7 @@
     if (!composer) return;
 
     if (isUnlocked()) {
-      relock();
-      publish('enterlude:sent');
+      relockAfterActualSend(composer);
       return;
     }
 
