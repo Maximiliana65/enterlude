@@ -25,7 +25,7 @@ English:     Enterlude - Prevent Accidental AI Chat Sends
 ## 短い説明（132文字以内）
 
 ```
-AIチャット(Claude/ChatGPT/Gemini)の誤送信を防ぐ拡張機能。Enterは常に改行になり、送信は明示的に解除した時だけ。うっかり送信の事故を防ぎます。
+AIチャット（Claude / ChatGPT / Gemini）の誤送信を防ぐ拡張機能。ロック中のEnterを改行にし、送信ボタンの誤クリックも防ぎます。
 ```
 
 ---
@@ -38,9 +38,10 @@ AIチャット（Claude / ChatGPT / Gemini）で、Enterキーや送信ボタン
 ■ できること
 ・ロック中はEnterキーでは送信されず、改行のみになります
 ・送信したい時だけ、右下の🔒アイコンをクリック(またはCtrl+Shift+U)でロックを解除
-・解除は次の1回だけ有効。送信すると自動でまたロックがかかります
+・解除は次の送信操作を1回だけ通し、送信すると自動でまたロックがかかります
 ・Escキーでロック解除をキャンセルできます
 ・対応サイトで保護対象として認識した送信・再試行ボタンの誤クリックをブロックします。サービス側の追加選択メニューは、最終項目を明示して選ぶと実行できます
+・ChatGPTでは公式のEnterキー設定を尊重します。公式設定が「Enterで改行」の場合、解除中でも改行だけでは解除を消費せず、お楽しみコメントも表示しません
 ・(任意)送信後に一言コメントを表示する、ちょっとしたお楽しみ機能つき(初期状態はOFF)
 
 設定を開くには、ブラウザのツールバーにある「拡張機能」アイコン（パズルピース）をクリックし、Enterludeを選択してください。お楽しみコメントのオン／オフと言語は、設定画面から変更できます。
@@ -69,6 +70,20 @@ https://github.com/Maximiliana65/enterlude
 
 ---
 
+## ChatGPT公式Enter設定に関する多言語追記
+
+Chrome Web Storeで英語・韓国語・繁体字中国語の詳しい説明を更新する場合は、対応する説明へ次の一文を追加します。
+
+```text
+English: On ChatGPT, Enterlude respects ChatGPT's own Enter-key setting. If ChatGPT is set to insert a line break with Enter, that line break does not consume the unlock or show a playful comment.
+
+한국어: ChatGPT에서는 ChatGPT 자체의 Enter 키 설정을 따릅니다. Enter가 줄바꿈으로 설정된 경우, 줄바꿈만으로는 잠금 해제 상태가 소모되지 않고 재미 코멘트도 표시되지 않습니다.
+
+繁體中文: 在 ChatGPT 中，Enterlude 會尊重 ChatGPT 本身的 Enter 鍵設定。若 ChatGPT 設定為按 Enter 換行，換行本身不會消耗解鎖狀態，也不會顯示趣味留言。
+```
+
+---
+
 ## カテゴリ
 
 「ワークフローと計画」(Workflow & Planning) を推奨します。無ければ次点で「機能とUI」(Functionality & UI)。
@@ -88,6 +103,8 @@ https://maximiliana65.github.io/enterlude/privacy.html
 
 - 小プロモーションタイル: `docs/images/store-promo-440x280.png`（440×280px）
 - マーキープロモーションタイル: `docs/images/store-marquee-1400x560.png`（1400×560px）
+- スクリーンショット1（ロック中）: `docs/images/store-screenshot-1-locked.png`（1280×800px）
+- スクリーンショット2（解除中）: `docs/images/store-screenshot-2-unlocked.png`（1280×800px）
 - ストアロゴ: Chrome Web Store管理画面で現在使用しているロゴを、実際の画面で確認する。リポジトリの`docs/images/logo.png`および`docs/images/logo-300.png`はGitHub Pages・資料用であり、ストアロゴのサイズ要件を代用して判断しない
 
 ## 次回申請時に確認するPrivacy項目
