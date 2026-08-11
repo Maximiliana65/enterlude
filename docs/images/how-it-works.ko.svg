@@ -1,28 +1,28 @@
 <svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
 <title>Enterlude 작동 방식</title>
-<desc>Enter나 전송 버튼을 눌렀을 때, 잠금 상태라면 줄바꿈만 입력되고, 잠금을 해제한 상태라면 정확히 한 번 전송된 후 자동으로 다시 잠기는 흐름을 보여주는 다이어그램입니다.</desc>
+<desc>지원 페이지에서 Enter 키나 보호 대상 버튼을 조작할 때의 기본 흐름입니다. 잠금 중에는 Enter가 줄바꿈으로 처리되고 버튼은 차단됩니다. 잠금 해제 중에는 다음 전송 동작을 허용한 뒤 전송 후 자동으로 다시 잠깁니다. 재잠금 조건은 서비스마다 다릅니다.</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#73726c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
 </defs>
 
 <rect x="190" y="40" width="300" height="64" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
-<text x="340" y="64" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Enter 또는 전송 버튼</text>
-<text x="340" y="86" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">Claude · ChatGPT · Gemini</text>
+<text x="340" y="64" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Enter 또는 보호 대상 버튼</text>
+<text x="340" y="86" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">지원 페이지의 기본 동작</text>
 
 <line x1="260" y1="104" x2="200" y2="170" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
 <line x1="420" y1="104" x2="485" y2="170" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
 
 <rect x="90" y="170" width="220" height="64" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
 <text x="200" y="194" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">잠금 상태(기본)</text>
-<text x="200" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">줄바꿈만 입력됨</text>
+<text x="200" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">Enter: 줄바꿈 / 버튼: 차단</text>
 
 <rect x="370" y="170" width="230" height="64" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-<text x="485" y="194" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#04342C">잠금 해제(1회)</text>
+<text x="485" y="194" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#04342C">잠금 해제(다음 전송)</text>
 <text x="485" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#085041">전송 후 자동 재잠금</text>
 
 <line x1="460" y1="300" x2="485" y2="234" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
 
 <rect x="310" y="300" width="300" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
 <text x="460" y="320" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#26215C">아이콘 클릭 / Ctrl+Shift+U</text>
-<text x="460" y="340" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#3C3489">1회만 잠금 해제</text>
+<text x="460" y="340" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#3C3489">다음 전송 동작 허용</text>
 </svg>

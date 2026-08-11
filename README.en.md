@@ -44,9 +44,10 @@ See [ROADMAP.md](./ROADMAP.md) for what's planned, [CHANGELOG.md](./CHANGELOG.md
 
 - While locked, **Enter inserts a line break instead of sending your message**
 - When you actually want to send, click the 🔒 badge in the corner (or press `Ctrl+Shift+U`) to unlock
-  - The unlock is good for **exactly one send**, then it automatically re-locks
+  - The unlock is for **the next send action**; after that action, it automatically re-locks
   - Press `Esc` to cancel the unlock without sending
 - Send and "Regenerate/Retry" buttons that Enterlude recognizes as protected on supported services are protected. When a service shows an additional-choice menu, explicitly selecting its final option can proceed
+- On ChatGPT, Enterlude respects ChatGPT's own Enter-key setting. If ChatGPT is set to insert a line break with Enter, a line break while unlocked does not consume the unlock or show a playful comment
 - (Optional) A small, playful comment can appear after each send — off by default
 
 To open the settings, click the browser toolbar's Extensions (puzzle-piece) icon and select Enterlude. You can turn playful comments on or off and choose their language in the settings.
